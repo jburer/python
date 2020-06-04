@@ -32,14 +32,13 @@ if (does_file_exist):
     file_key = Fernet.generate_key()
     print(file_key)
 
-    # encrpyt file
+    # encrpyt file and sign file
     encrypted_file_object = Fernet(file_key)
     print(encrypted_file_object)
     encrypted_file = encrypted_file_object.encrypt(file_as_bytes)
     print(encrypted_file)
-
-    # sign file
-
+    #encrypted_file_timestamp = encrypted_file_object.extract_timestamp(encrypted_file)
+    #print(encrypted_file_timestamp)
 
     # estalish secure connection
 

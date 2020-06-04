@@ -6,6 +6,12 @@ from hmac import compare_digest
 import cryptography
 from cryptography.fernet import Fernet
 
+#hash algorithms
+print('## hash algorithms ##')
+print(hashlib.algorithms_available)
+print(hashlib.algorithms_guaranteed)
+print('\n')
+
 #plain text
 print("##plain text##")
 password_as_str = "password"
@@ -13,12 +19,6 @@ print(password_as_str)
 password_as_bytes = password_as_str.encode('ascii')
 print(password_as_bytes)
 print("\n")
-
-#hash algorithms
-print('## hash algorithms ##')
-print(hashlib.algorithms_available)
-print(hashlib.algorithms_guaranteed)
-print('\n')
 
 #hashed text
 print("## hashed text ##")
