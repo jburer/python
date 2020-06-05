@@ -1,28 +1,52 @@
 import base64
 
-#plain text
-print("##plain text##")
-password_as_str = "password"
-print(password_as_str)
-password_as_bytes = password_as_str.encode('ascii')
-print(password_as_bytes)
-print("\n")
+def encode_object(data_in):
+    endcoded_objects = []
 
-#base64 text
-print("##base64 text##")
-base64_password_as_bytes = base64.b64encode(password_as_bytes)
-print(base64_password_as_bytes)
-base64_password_as_str = base64_password_as_bytes.decode('ascii')
-print(base64_password_as_str)
-print("\n")
+    #plain text
+    data_as_str = data_in
+    endcoded_objects.append(data_as_str)
+
+    data_as_bytes = data_as_str.encode('ascii')
+    endcoded_objects.append(data_as_bytes)
+
+    #hex
+    data_as_hex = hex(data_as_bytes)
+    endcoded_objects.append(data_as_hex)
+
+    #base64 text
+    #data_as_base64_as_bytes = base64.b64encode(data_as_bytes)
+    #endcoded_objects.append(data_as_base64_as_bytes)
 
 
-#decoded text
-print("##decoded text##")
-password_as_ascii = password_as_bytes.decode('ascii')
-print(password_as_ascii)
-password_as_unicode = password_as_bytes.decode('utf-8')
-print(password_as_unicode)
-base64_password_as_ascii = base64_password_as_bytes.decode('ascii)')
-print(base64_password_as_ascii)
-print("\n")
+    return (endcoded_objects)
+
+
+    #decoded text
+    #print("##decoded text##")
+    #password_as_ascii = password_as_bytes.decode('ascii')
+    #print(password_as_ascii)
+    #password_as_unicode = password_as_bytes.decode('utf-8')
+    #print(password_as_unicode)
+    #base64_password_as_ascii = base64_password_as_bytes.decode('ascii)')
+    #print(base64_password_as_ascii)
+    #print("\n")
+    #data_as_base64_as_str = data_as_base64_as_bytes.decode('ascii')
+    
+    #print(base64_password_as_str)
+    #print("\n")
+
+encoded_data = encode_object("password")
+print(encoded_data)
+
+def encode_type(endcoded_object):
+    try:
+        y = endcoded_object.fromhex()
+        print(y)
+        #return y.hex() == endcoded_object
+    except Exception:
+        return False   
+        
+for x in encoded_data:
+    print(x)
+    print(encode_type(x))
