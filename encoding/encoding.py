@@ -1,18 +1,25 @@
+import re
 import base64
+from conversioning import int_conversion
 
 def encode_object(data_in):
     endcoded_objects = []
+
+    #check if number
+    is_number = re.match("[0-9]+", data_in)
+    if is_number:
+        print("yelp")
 
     #plain text
     data_as_str = data_in
     endcoded_objects.append(data_as_str)
 
-    data_as_bytes = data_as_str.encode('ascii')
-    endcoded_objects.append(data_as_bytes)
+    #data_as_bytes = data_as_str.encode('ascii')
+    #endcoded_objects.append(data_as_bytes)
 
     #hex
-    data_as_hex = hex(data_as_bytes)
-    endcoded_objects.append(data_as_hex)
+    #data_as_hex = hex(data_as_bytes)
+    #endcoded_objects.append(data_as_hex)
 
     #base64 text
     #data_as_base64_as_bytes = base64.b64encode(data_as_bytes)

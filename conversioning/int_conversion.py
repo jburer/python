@@ -1,7 +1,7 @@
 from sys import getsizeof
 from logging import basicConfig, debug, DEBUG
 
-basicConfig(filename='int-conversion.log', level=DEBUG, format='%(asctime)s:%(levelname)s:%(message)s')
+basicConfig(filename='int_conversion.log', level=DEBUG, format='%(asctime)s:%(levelname)s:%(message)s')
 
 num = 0
 nums = []
