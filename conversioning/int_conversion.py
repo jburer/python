@@ -3,71 +3,57 @@ from logging import basicConfig, debug, DEBUG
 
 basicConfig(filename='int_conversion.log', level=DEBUG, format='%(asctime)s:%(levelname)s:%(message)s')
 
-#num = 0
-#nums = []
-
-#num_as_bin = bin(num)
-#num_as_oct = oct(num)
-#num_as_int = int(num)
-#num_as_hex = hex(num)
-
-#num_as_bin_as_bytes = bytes(num_as_bin, 'utf-8')
-#print(num_as_bin_as_bytes)
-#print(getsizeof(num_as_bin_as_bytes))
-#num_as_oct = oct(num)
-#num_as_int = int(num)
-#num_as_hex = hex(num)
-
-#nums.append(bin(num))
-#nums.append(oct(num))
-#nums.append(int(num))
-#nums.append(hex(num))
-
-#nums.append(int(num_as_bin, base=2))
-#nums.append(int(num_as_oct, base=8))
-#nums.append(int(num_as_int))
-#nums.append(int(num_as_hex, base=16))
-
-
 def is_base(number):
-    number_stats = []
-    number_stats.append("this is us")
+    numbers = []
 
     try:
-        is_bin = int(number, base=2)
+        is_bin = int(str(number), base=2)
         if bin(is_bin) == number:
             bin_size = getsizeof(is_bin)
-            number_stats.append(str(number) + " is Base 2 and is " + str(bin_size) + " bytes")
+            numbers.append(str(number) + " is Base 2 and is " + str(bin_size) + " bytes")
     except Exception as err:
         debug(str(type(err)) + ":" + str(err.args))
 
     try:
-        is_oct = int(number, base=8)
+        is_oct = int(str(number), base=8)
         if oct(is_oct) == number:
             oct_size = getsizeof(is_oct)
-            number_stats.append(str(number) + " is Base 8 and is " + str(oct_size) + " bytes")
+            numbers.append(str(number) + " is Base 8 and is " + str(oct_size) + " bytes")
     except Exception as err:
         debug(str(type(err)) + ":" + str(err.args))
 
     try:
         is_dec = int(number)
         if int(is_dec) == number:
-            number_stats.append(str(number) + " is Base 10")
-        else:
-            number_stats.append("burp")
+            dec_size = getsizeof(is_dec)
+            numbers.append(str(number) + " is Base 10 and is " + str(dec_size) + " bytes")
     except Exception as err:
         debug(str(type(err)) + ":" + str(err.args))
 
     try:   
-        is_hex = int(number, base=16)
+        is_hex = int(str(number), base=16)
         if hex(is_hex) == number:
-            number_stats.append(str(number) + " is Base 16")
+            hex_size = getsizeof(is_hex)
+            numbers.append(str(number) + " is Base 16 and is " + str(hex_size) + " bytes")
     except Exception as err:
         debug(str(type(err)) + ":" + str(err.args))
 
-    return number_stats
+    number_as_bin = bin(number)
+    number_as_oct = oct(number)
+    number_as_int = int(number)
+    number_as_hex = hex(number)
+    number_as_bytes = number.to_bytes((number.bit_length() + 7) // 8, 'big')
 
-#for x in nums:
-#    is_base(x)
+    number_as_bin_size = getsizeof(number_as_bin)
+    number_as_oct_size = getsizeof(number_as_oct)
+    number_as_int_size = getsizeof(number_as_int)
+    number_as_hex_size = getsizeof(number_as_hex)
+    number_as_bytes_size = getsizeof(number_as_bytes)
 
-print(is_base(1234))
+    numbers.append(str(number) + " as binary is " + number_as_bin + " and is " + str(number_as_bin_size) + " bytes")
+    numbers.append(str(number) + " as octet is " + number_as_oct + " and is " + str(number_as_oct_size) + " bytes")
+    numbers.append(str(number) + " as decimal is " + str(number_as_int) + " and is " + str(number_as_int_size) + " bytes")
+    numbers.append(str(number) + " as hexadecimal is " + number_as_hex + " and is " + str(number_as_hex_size) + " bytes")
+    numbers.append(str(number) + " as bytes is " + str(number_as_bytes) + " and is " + str(number_as_bytes_size) + " bytes")
+
+    return numbers

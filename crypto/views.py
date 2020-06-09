@@ -14,6 +14,6 @@ def encode(request, data):
 
     content = ''
     for x in encoded_object:
-        content += str(x) + " as " + str(type(x).__name__) + " is " + str(sys.getsizeof(x)) + " bytes<p>"
+        content += str(x) + " and is of type " + str(type(x).__name__) + "<p>"
 
     return HttpResponse(content)

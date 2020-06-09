@@ -5,21 +5,22 @@ from conversioning import int_conversion
 def encode_object(data_in):
     endcoded_objects = []
 
-    #check if number
-    is_number = re.match("[0-9]+", data_in)
-    if is_number:
-        endcoded_objects.append(int_conversion.is_base(data_in))
-
     #plain text
     data_as_str = data_in
     endcoded_objects.append(data_as_str)
 
+    #check if number
+    is_number = re.match("[0-9]+", data_in)
+    if is_number:
+        as_numbers = int_conversion.is_base(int(data_in))
+        
+        for as_number in as_numbers:
+            endcoded_objects.append(as_number)
+    
+
+
     #data_as_bytes = data_as_str.encode('ascii')
     #endcoded_objects.append(data_as_bytes)
-
-    #hex
-    #data_as_hex = hex(data_as_bytes)
-    #endcoded_objects.append(data_as_hex)
 
     #base64 text
     #data_as_base64_as_bytes = base64.b64encode(data_as_bytes)
