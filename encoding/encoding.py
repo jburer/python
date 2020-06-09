@@ -8,7 +8,7 @@ def encode_object(data_in):
     #check if number
     is_number = re.match("[0-9]+", data_in)
     if is_number:
-        print("yelp")
+        endcoded_objects.append(int_conversion.is_base(data_in))
 
     #plain text
     data_as_str = data_in
@@ -43,17 +43,17 @@ def encode_object(data_in):
     #print(base64_password_as_str)
     #print("\n")
 
-encoded_data = encode_object("password")
-print(encoded_data)
+#encoded_data = encode_object("password")
+#print(encoded_data)
 
-def encode_type(endcoded_object):
-    try:
-        y = endcoded_object.fromhex()
-        print(y)
-        #return y.hex() == endcoded_object
-    except Exception:
-        return False   
+#def encode_type(endcoded_object):
+#    try:
+#        y = endcoded_object.fromhex()
+#        print(y)
+#        #return y.hex() == endcoded_object
+#    except Exception:
+#        return False   
         
-for x in encoded_data:
-    print(x)
-    print(encode_type(x))
+#for x in encoded_data:
+ #   print(x)
+#    print(encode_type(x))
