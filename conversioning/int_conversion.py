@@ -70,4 +70,4 @@ def is_base(number):
 #for x in nums:
 #    is_base(x)
 
-#print(is_base(1234))
+print(is_base(1234))

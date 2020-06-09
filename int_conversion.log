@@ -431,3 +431,12 @@
 2020-06-08 21:50:26,941:DEBUG:Using selector: KqueueSelector
 2020-06-08 21:50:31,707:DEBUG:Using selector: KqueueSelector
 2020-06-08 21:50:40,634:DEBUG:Using selector: KqueueSelector
+2020-06-09 13:14:24,546:DEBUG:Using selector: KqueueSelector
+2020-06-09 13:14:42,738:WARNING:Not Found: /favicon.ico
+2020-06-09 13:14:48,649:WARNING:Not Found: /1234
+2020-06-09 13:14:58,800:DEBUG:<class 'ValueError'>:("invalid literal for int() with base 2: '1234'",)
+2020-06-09 13:39:08,352:DEBUG:<class 'TypeError'>:("int() can't convert non-string with explicit base",)
+2020-06-09 13:39:08,353:DEBUG:<class 'TypeError'>:("int() can't convert non-string with explicit base",)
+2020-06-09 13:39:37,384:DEBUG:<class 'TypeError'>:("int() can't convert non-string with explicit base",)
+2020-06-09 13:39:37,432:DEBUG:Using selector: KqueueSelector
+2020-06-09 13:40:20,252:DEBUG:<class 'ValueError'>:("invalid literal for int() with base 2: '1234'",)
