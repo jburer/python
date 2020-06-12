@@ -2,7 +2,7 @@ import sys
 import re
 from datetime import datetime
 from django.http import HttpResponse
-from encoding import encoding
+from python.encoding import encoding
 
 # Create your views here.
 def home(request):
