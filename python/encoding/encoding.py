@@ -1,6 +1,6 @@
 import re
 import base64
-from python.conversioning import int_conversion, byte_conversion
+from python.conversioning import int_conversion #, byte_conversion
 
 def encode_object(data_in):
     endcoded_objects = []
