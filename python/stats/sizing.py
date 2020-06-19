@@ -1,11 +1,10 @@
 from sys import getsizeof
-from python.script_logging import script_logging
+from pathlib import Path
+from python.script_logging import script_logging as log
 
-script_logging.script_logging_def(__name__)
-
-def sizing_def(object):
+def sizing_def(object_in):
     try:
-        size_of_object = getsizeof(object)
+        size_of_object = getsizeof(object_in)
         return size_of_object
     except Exception as err:
-        script_logging.debug(str(type(err)) + ":" + str(err.args))
+        log.debug(str(Path(__file__).stem) + ":" + str(type(err)) + ":" + str(err.args))

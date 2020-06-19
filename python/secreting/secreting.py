@@ -1,4 +1,5 @@
 import secrets
+import binascii
 
 random_number = secrets.randbits(16)
 #print(random_number)
@@ -54,3 +55,58 @@ print('\n')
 
 my_string = 'test'
 print(my_string.__hash__())
+
+x = b'El ni\xc3\xb1o'
+print(x)
+s = x.decode('cp855')
+print(type(s))
+print(s)
+print("\n")
+
+
+x = 'FF'
+print(x)
+#s = x.decode('cp855')
+#print(type(s))
+#print(s)
+y = bytes.fromhex(x)
+print(y)
+print("\n")
+
+x = b'.\xf0\xf1\xf2'
+print(x)
+s = bytes.hex(x)
+print(type(s))
+print(s)
+z = int(s, 16)
+print(z)
+print("\n")
+
+a = hex(z)
+b = bytes(a, "utf")
+print(a)
+print(b)
+print("\n")
+
+x = ord('m')
+print(x)
+
+y = b'Python bytes'
+z = list(y)
+print(z)
+print("\n")
+
+a = "Python"
+b = a.encode("utf8")
+c = binascii.hexlify(b)
+print(b)
+print(c)
+print("\n")
+
+a = "n"
+b = a.encode("utf8")
+c = binascii.hexlify(b)
+print(b)
+print(c)
+
+x = chr

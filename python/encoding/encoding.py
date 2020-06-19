@@ -1,6 +1,6 @@
 import re
 import base64
-from python.conversioning import int_conversion #, byte_conversion
+from python.conversioning import int_conversion, byte_conversion
 
 def encode_object(data_in):
     endcoded_objects = []
@@ -17,15 +17,13 @@ def encode_object(data_in):
         for as_number in as_numbers:
             endcoded_objects.append(as_number)
     
-    is_bytes = re.match("", data_in)
-    
-    
-    data_as_bytes = data_as_str.encode('ascii')
+    #as bytes
+    data_as_bytes = byte_conversion.byting_def(data_in)
     endcoded_objects.append(data_as_bytes)
 
     #base64 text
-    data_as_base64_as_bytes = base64.b64encode(data_as_bytes)
-    endcoded_objects.append(data_as_base64_as_bytes)
+    #data_as_base64_as_bytes = base64.b64encode(data_as_bytes)
+    #endcoded_objects.append(data_as_base64_as_bytes)
 
 
     return (endcoded_objects)
