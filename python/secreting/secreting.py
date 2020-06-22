@@ -108,5 +108,30 @@ b = a.encode("utf8")
 c = binascii.hexlify(b)
 print(b)
 print(c)
+print("\n")
 
-x = chr
+
+a = 512
+x = chr(a)
+y = [70, 111, 106, 94, 101, 100, 31, 95, 105, 22, 91, 87, 125, 135]
+z = bytes(y)
+#b = bytes([a])
+print(a)
+print(x)
+print(y)
+print(len(y))
+print(z)
+print(len(z))
+print(hex(a))
+if a < 256:
+    print(bytes([a]))
+else:
+    print(a.to_bytes(2,byteorder='big'))
+    print(len(a.to_bytes(2,byteorder='big')))
+print("\n")
+
+c = b'\x87'
+y = z.decode('utf8')
+print(c)
+print(y)
+print("\n")

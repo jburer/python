@@ -6,8 +6,8 @@ def encode_object(data_in):
     endcoded_objects = []
 
     #plain text
-    data_as_str = data_in
-    endcoded_objects.append(data_as_str)
+    #data_as_str = data_in
+    #endcoded_objects.append(data_as_str)
 
     #check if number
     is_number = re.fullmatch("[0-9]+", data_in)
