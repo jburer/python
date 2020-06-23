@@ -1,0 +1,6 @@
+{"TIME":"2020-06-22 19:01:57,680","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
+{"TIME":"2020-06-22 19:02:03,090","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
+{"TIME":"2020-06-22 19:02:04,661","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
+{"TIME":"2020-06-22 19:02:06,033","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
+{"TIME":"2020-06-22 19:08:53,511","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
+{"TIME":"2020-06-22 19:23:51,666","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"TypeError","ARGS":"('can only concatenate str (not \"int\") to str',)"}}

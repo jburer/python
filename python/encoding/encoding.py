@@ -1,25 +1,28 @@
 import re
 import base64
 from python.conversioning import int_conversion, byte_conversion
+from python.stats import sizing, typing
 
-def encode_object(data_in):
+def encode_object(in_data):
     endcoded_objects = []
 
     #plain text
-    #data_as_str = data_in
-    #endcoded_objects.append(data_as_str)
+    data_as_str = in_data
+    endcoded_objects.append(data_as_str)
 
     #check if number
-    is_number = re.fullmatch("[0-9]+", data_in)
-    if is_number:
-        as_numbers = int_conversion.is_base(int(data_in))
-        
-        for as_number in as_numbers:
-            endcoded_objects.append(as_number)
+    if int(in_data):
+        endcoded_objects.append(int_conversion.get_number(in_data,"bin"))
+        endcoded_objects.append(int_conversion.get_number(in_data,"oct"))
+        endcoded_objects.append(int_conversion.get_number(in_data,"hex"))
+
+    endcoded_objects.append(sizing.get_size(in_data))
+    endcoded_objects.append(typing.get_type(in_data)) 
+
     
     #as bytes
-    data_as_bytes = byte_conversion.byting_def(data_in)
-    endcoded_objects.append(data_as_bytes)
+    #data_as_bytes = byte_conversion.byting_def(data_in)
+    #endcoded_objects.append(data_as_bytes)
 
     #base64 text
     #data_as_base64_as_bytes = base64.b64encode(data_as_bytes)

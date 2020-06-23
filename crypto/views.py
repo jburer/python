@@ -14,6 +14,6 @@ def encode(request, data):
 
     content = ''
     for x in encoded_object:
-        content += str(x) + " and is of type " + str(type(x).__name__) + "<p>"
+        content += str(x) + "<p>"
 
     return HttpResponse(content)

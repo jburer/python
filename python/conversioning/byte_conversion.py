@@ -1,23 +1,19 @@
 from pathlib import Path
-from python.stats import sizing
 from python.script_logging import script_logging as log
 
-def byting_def(data_to_bytes):   
+def get_bytes(in_bytes):   
+    of_bytes = " as bytes is "
 
     try:
-        data_to_bytes = int(data_to_bytes)
-        data_as_bytes = data_to_bytes.to_bytes((data_to_bytes.bit_length() + 7) // 8, 'big')
-        data_as_bytes_size = sizing.sizing_def(data_as_bytes)
-        as_bytes = str(data_to_bytes) + " as bytes is " + str(data_as_bytes) + " and is " + str(data_as_bytes_size) + " bytes"
+        in_bytes_as_int = int(in_bytes)
+        of_bytes += in_bytes_as_int.to_bytes((in_bytes_as_int.bit_length() + 7) // 8, 'big')
+        return of_bytes
     except Exception as err:
-        log.debug(str(Path(__file__).stem) + ":" + str(type(err)) + ":" + str(err.args))
+        log.error_logging_def(err, Path(__file__).stem)
 
     try:
-        data_as_bytes = data_to_bytes.encode('utf-8')
-        data_as_bytes_size = sizing.sizing_def(data_as_bytes)
-        as_bytes = str(data_to_bytes) + " as bytes is " + str(data_as_bytes) + " and is " + str(data_as_bytes_size) + " bytes"
+        in_bytes_as_bytes = in_bytes.encode('utf-8')
+        of_bytes += in_bytes_as_bytes
     except Exception as err:
-        log.debug(str(Path(__file__).stem) + ":" + str(type(err)) + ":" + str(err.args))
-
-    return as_bytes
+        log.error_logging_def(err, Path(__file__).stem)
     

@@ -123,11 +123,11 @@ print(len(y))
 print(z)
 print(len(z))
 print(hex(a))
-if a < 256:
-    print(bytes([a]))
-else:
-    print(a.to_bytes(2,byteorder='big'))
-    print(len(a.to_bytes(2,byteorder='big')))
+#if a < 256:
+#    print(bytes([a]))
+#else:
+print(a.to_bytes(2,byteorder='big'))
+print(len(a.to_bytes(2,byteorder='big')))
 print("\n")
 
 c = b'\x87'
