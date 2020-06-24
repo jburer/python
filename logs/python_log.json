@@ -1,6 +1,29 @@
-{"TIME":"2020-06-22 19:01:57,680","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
-{"TIME":"2020-06-22 19:02:03,090","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
-{"TIME":"2020-06-22 19:02:04,661","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
-{"TIME":"2020-06-22 19:02:06,033","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
-{"TIME":"2020-06-22 19:08:53,511","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"AttributeError","ARGS":"(\"'str' object has no attribute 'append'\",)"}}
-{"TIME":"2020-06-22 19:23:51,666","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"script_logging","ERR":"TypeError","ARGS":"('can only concatenate str (not \"int\") to str',)"}}
+{"TIME":"2020-06-23 14:06:22,682","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"TypeError","ARGS":"('can only concatenate str (not \"bytes\") to str',)"}}
+{"TIME":"2020-06-23 14:06:22,683","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"TypeError","ARGS":"('can only concatenate str (not \"bytes\") to str',)"}}
+[{"TIME":"2020-06-23 14:13:02,851","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 14:29:43,540","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 14:30:23,944","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 14:30:23,944","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 14:30:23,945","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"TypeError","ARGS":"('can only concatenate str (not \"bytes\") to str',)"}}
+{"TIME":"2020-06-23 15:54:22,105","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 15:54:22,106","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 15:54:22,107","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"TypeError","ARGS":"('can only concatenate str (not \"bytes\") to str',)"}}
+{"TIME":"2020-06-23 15:55:39,750","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 15:55:39,750","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 15:57:00,094","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 15:57:00,095","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 18:43:03,544","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-23 18:43:03,545","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: 'password'\",)"}}
+{"TIME":"2020-06-24 14:46:54,014","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 14:46:54,014","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:21:12,761","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:22:06,788","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:22:06,788","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:22:51,028","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:22:51,029","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}{"TIME":"2020-06-24 15:30:58,700","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:33:37,776","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:33:37,776","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:34:03,417","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"encoding","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:34:03,417","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-24 15:38:30,555","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-24 15:38:30,559","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
