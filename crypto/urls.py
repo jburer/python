@@ -3,5 +3,5 @@ from crypto import views
 
 urlpatterns = [
     path("", views.home, name="home"),
-    path("crypto/<data>", views.encode, name="encode"),
+    path("python/<data>", views.python, name="python"),
 ]
