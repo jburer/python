@@ -1,11 +1,12 @@
 from pathlib import Path
 from python_library.script_logging import script_logging as log
 
-def authenticator_def(authenticator):
+import hashlib
+
+def secure_hash_algorithm_def():
     try:
-        authentiator = authenticator
-        return authentiator
+        my_secure_hash_algorithm = hashlib.sha256()
+        return my_secure_hash_algorithm
     except Exception as err:
         log.error_logging_def(err, Path(__file__).stem)
 
-authenticator_def('password')

@@ -27,3 +27,32 @@
 {"TIME":"2020-06-24 15:34:03,417","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
 {"TIME":"2020-06-24 15:38:30,555","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
 {"TIME":"2020-06-24 15:38:30,559","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-26 13:24:45,911","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-26 13:24:45,965","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 13, in python
+    myobject = derived_secure_hash.derived_secure_hash_def(data)
+  File "/Users/jimburer/Git/cryptography/python_library/data/data_transformation/data_confidentiality/hash/secure_hash/derived_secure_hash/derived_secure_hash.py", line 24, in derived_secure_hash_def
+    secure_hash_algorithm = secure_hash_algorithm.secure_hash_algorithm_def()
+UnboundLocalError: local variable 'secure_hash_algorithm' referenced before assignment
+{"TIME":"2020-06-26 13:26:23,632","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-26 13:26:23,634","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-26 19:03:53,917","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-26 19:03:53,918","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"derived_secure_hash","ERR":"TypeError","ARGS":"(\"a bytes-like object is required, not 'str'\",)"}}
+{"TIME":"2020-06-26 19:03:53,994","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 17, in python
+    for x in myobject:
+TypeError: 'NoneType' object is not iterable

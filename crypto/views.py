@@ -3,7 +3,7 @@ import re
 from datetime import datetime
 from django.http import HttpResponse
 
-from python_library.data.data_transformation.data_confidentiality.hash.secure_hash.secure_hash import derived_secure_hash
+from python_library.data.data_transformation.data_confidentiality.hash.secure_hash.derived_secure_hash import derived_secure_hash
 
 # Create your views here.
 def home(request):
