@@ -1,5 +1,5 @@
 from pathlib import Path
-from python_library.script_logging import script_logging as log
+from python_library.product_service.operations.event.script_logging import script_logging as log
 import hashlib
 
 #authenticator

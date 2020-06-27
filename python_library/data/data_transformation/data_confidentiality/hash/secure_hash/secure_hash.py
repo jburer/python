@@ -1,5 +1,5 @@
 from pathlib import Path
-from python_library.script_logging import script_logging as log
+from ppython_library.product_service.operations.event.script_logging import script_logging as log
 
 from python_library.data.data_transformation.data_confidentiality.hash.secure_hash import secure_hash_algorithm
 import hashlib
