@@ -56,3 +56,98 @@ Traceback (most recent call last):
   File "/Users/jimburer/Git/cryptography/crypto/views.py", line 17, in python
     for x in myobject:
 TypeError: 'NoneType' object is not iterable
+{"TIME":"2020-06-26 19:04:52,753","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-26 19:07:06,080","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-26 19:07:06,081","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"derived_secure_hash","ERR":"TypeError","ARGS":"(\"a bytes-like object is required, not 'str'\",)"}}
+{"TIME":"2020-06-26 19:07:06,138","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 17, in python
+    for x in myobject:
+TypeError: 'NoneType' object is not iterable
+{"TIME":"2020-06-26 19:19:59,166","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-26 19:19:59,168","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-26 19:24:12,132","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-26 19:24:12,197","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 13, in python
+    myobject = derived_secure_hash.derived_secure_hash_def(data)
+  File "/Users/jimburer/Git/cryptography/python_library/data/data_transformation/data_confidentiality/hash/secure_hash/derived_secure_hash/derived_secure_hash.py", line 30, in derived_secure_hash_def
+    random_number = random_number.random_number_def()
+UnboundLocalError: local variable 'random_number' referenced before assignment
+{"TIME":"2020-06-26 19:25:38,972","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-26 19:25:38,973","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-26 19:25:45,306","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-26 19:25:45,307","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"TypeError","ARGS":"(\"int() argument must be a string, a bytes-like object or a number, not 'module'\",)"}}
+{"TIME":"2020-06-26 19:25:45,307","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"AttributeError","ARGS":"(\"module 'python_library.data.data_transformation.data_confidentiality.random_number.random_number' has no attribute 'encode'\",)"}}
+{"TIME":"2020-06-26 19:25:45,307","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"derived_secure_hash","ERR":"TypeError","ARGS":"(\"a bytes-like object is required, not 'NoneType'\",)"}}
+{"TIME":"2020-06-26 19:25:45,363","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 17, in python
+    for x in myobject:
+TypeError: 'NoneType' object is not iterable
+{"TIME":"2020-06-26 19:26:09,832","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-26 19:26:09,833","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-26 19:26:15,315","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-26 19:26:15,454","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 17, in python
+    for x in myobject:
+TypeError: 'NoneType' object is not iterable
+{"TIME":"2020-06-26 19:27:00,073","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-26 19:27:00,075","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-26 19:27:15,018","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-26 19:27:15,166","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 17, in python
+    for x in myobject:
+TypeError: 'NoneType' object is not iterable
+{"TIME":"2020-06-26 19:29:08,068","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-26 19:29:08,069","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-27 09:28:51,549","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-27 09:28:51,738","LOG_LEVEL":"ERROR","MESSAGE":{%s: %s}}
+Traceback (most recent call last):
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jimburer/Git/cryptography/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jimburer/Git/cryptography/crypto/views.py", line 17, in python
+    for x in myobject:
+TypeError: 'NoneType' object is not iterable
+{"TIME":"2020-06-27 09:28:52,210","LOG_LEVEL":"WARNING","MESSAGE":{%s: %s}}
+{"TIME":"2020-06-27 09:31:04,110","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-27 09:31:04,111","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
+{"TIME":"2020-06-27 09:31:10,098","LOG_LEVEL":"DEBUG","MESSAGE":{"PATH":"byte_conversion","ERR":"ValueError","ARGS":"(\"invalid literal for int() with base 10: '123456akhjgfjhgf'\",)"}}
+{"TIME":"2020-06-27 09:32:05,242","LOG_LEVEL":"INFO","MESSAGE":{%s changed, reloading.}}
+{"TIME":"2020-06-27 09:32:05,245","LOG_LEVEL":"DEBUG","MESSAGE":{Using selector: %s}}
