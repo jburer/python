@@ -1,11 +1,11 @@
 from pathlib import Path
 from python_library.product_service.operations.event.log import log
+from cryptography.fernet import Fernet
 
-import secrets
+def key_generation_def():
 
-def random_number_def():   
     try:
-        random_number = secrets.randbits(16*8)
-        return random_number
+        key = Fernet.generate_key()
+        return key
     except Exception as err:
         log.logger.debug(err, exc_info=True)

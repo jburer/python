@@ -3,14 +3,15 @@ import re
 from datetime import datetime
 from django.http import HttpResponse
 
-from python_library.data.data_transformation.data_confidentiality.hash.secure_hash.derived_secure_hash import derived_secure_hash
+from python_library.data.data_transformation.data_confidentiality.encryption import encryption
 
 # Create your views here.
 def home(request):
     return HttpResponse("Hello")
 
 def python(request, data):
-    myobject = derived_secure_hash.derived_secure_hash_def(data)
+    myobject = []
+    myobject.append(encryption.encryption_def(data))
 
 
     content = ''

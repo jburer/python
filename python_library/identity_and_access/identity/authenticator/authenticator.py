@@ -6,6 +6,6 @@ def authenticator_def(authenticator):
         authentiator = authenticator
         return authentiator
     except Exception as err:
-        log.error_logging_def(err, Path(__file__).stem)
+        log.logger.debug(err, exc_info=True)
 
-authenticator_def('password')
+#authenticator_def('password')
