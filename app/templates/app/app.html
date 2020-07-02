@@ -1,0 +1,13 @@
+{% extends 'app/layout.html' %}
+{% block title %}
+App
+{% endblock %}
+{% block content %}
+        Hello, there!  Here is a secret:  
+        <p>
+        {{ data }}
+        <p>
+        <span class="message">{{ ciphertext }}</span>
+        <p>
+        Don't tell anyone, please.
+{% endblock %}
