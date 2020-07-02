@@ -1,5 +1,5 @@
 from pathlib import Path
-from python_library.product_service.operations.event.script_logging import script_logging as log
+from python_library.product_service.operations.event.log import log
 import hashlib
 
 #authenticator
@@ -18,6 +18,9 @@ from python_library.data.data_transformation.type_conversion import byte_convers
 def derived_secure_hash_def(authenticator):
 
     print(authenticator)
+    #validate integrity of input
+
+    #authorize execution
 
     #convert authenticator to bytes
     authenticator_as_bytes = byte_conversion.byte_conversion_def(authenticator)

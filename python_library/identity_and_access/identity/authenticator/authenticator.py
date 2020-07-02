@@ -1,5 +1,5 @@
 from pathlib import Path
-from python_library.product_service.operations.event.script_logging import script_logging as log
+from python_library.product_service.operations.event.log import log
 
 def authenticator_def(authenticator):
     try:
