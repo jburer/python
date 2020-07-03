@@ -1,0 +1,3 @@
+[console_scripts]
+hsh = hsh.app:main
+
