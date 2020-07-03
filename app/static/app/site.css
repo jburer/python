@@ -1,13 +1,13 @@
 .message {
     font-weight: 600;
-    color: blue
+    color: rgb(39, 46, 45)
 }
 
 .navbar {
-    background-color: azure;
+    background-color: rgb(2, 104, 104);
     font-size: 1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: wheat;
+    color: rgb(253, 253, 253);
     padding: 8px 5px 8px 5px;
 }
 
@@ -29,4 +29,13 @@
 .body-content {
     padding: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[name=message] {
+    width: 80%;
+}
+
+.message_list th, td {
+    text-align: left;
+    padding-right: 15px;
 }
