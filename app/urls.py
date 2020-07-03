@@ -1,10 +1,10 @@
 from django.urls import path
 from app import views
-from app.models import LogMessage
+from app.models import AuthenticatorStorage
 
 home_list_view = views.HomeListView.as_view(
-    queryset=LogMessage.objects.order_by("-log_date")[:5], 
-    context_object_name = "message_list",
+    queryset=AuthenticatorStorage.objects.order_by("-store_date")[:5], 
+    context_object_name = "secret_list",
     template_name = "app/home.html"
 )
 
@@ -14,4 +14,5 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("contact/", views.contact, name="contact"),
     path("log/", views.log_message, name="log"),
+    path("secret/", views.store_secret, name="secret"),
 ]

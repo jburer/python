@@ -3,9 +3,8 @@
 Home
 {% endblock %}
 {% block content %}
-    <h2>Logged Messages</h2>
-
     {% if message_list %}
+        <h2>Logged Messages</h2>
         <table class="message_list">
             <thead>
                 <tr>
@@ -28,5 +27,30 @@ Home
         </table>
     {% else %}
         <p>No messages have been loggged.  Use the <a href="{% url 'log' %}">Log Message</a> form.</p>
+    {% endif %}
+    {% if secret_list %}
+        <h2>Secrets</h2>
+        <table class="secret_list">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Secret</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for derived_secure_hash in secret_list %}
+                <tr>
+                    <td>{{ derived_secure_hash.store_date | date:'d M Y' }}</td>
+                    <td>{{ derived_secure_hash.store_date | time:'H:i:s' }}</td>
+                    <td>
+                        {{ derived_secure_hash.derived_secure_hash }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No secrets have been loggged.  Use the <a href="{% url 'secret' %}">Secret</a> form.</p>
     {% endif %}
 {% endblock %}
