@@ -1,11 +1,11 @@
 {% extends 'app/layout.html' %}
 {% block title %}
-Secret
+Create Authenticator
 {% endblock %}
 {% block content %}
-    <form method="POST" class="secret-form">
+    <form method="POST" class="authenticator-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Secret</button>
+        <button type="submit" class="save btn btn-default">Submit</button>
     </form>
 {% endblock %}

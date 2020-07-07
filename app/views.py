@@ -53,43 +53,19 @@ def log_message(request):
     else:
         return render(request, "app/log_message.html", {"form" : form})
 
-def store_secret(request):
+def create_authenticator(request):
     form = AuthenticatorStorageForm(request.POST or None)
-    #userf = UsersModelForm(request.POST)
 
     if request.method == "POST":
         if form.is_valid():
-
-            secret = form.save(commit=False)
-            #new_user = userf.save(commit=False)
-
-            #password = userf.cleaned_data['password']
-            #password = form.cleaned_data['derived_secure_hash']
-
-            my_derived_secure_hash = derived_secure_hash.derived_secure_hash_def(form.cleaned_data['derived_secure_hash'])
-
-            #new_user.password = new1
-            #secret.password = my_derived_secure_hash
-
-            #different ways to get the data
-            print(form['derived_secure_hash'].value())
-            print(form.data['derived_secure_hash'])
-            print(form.cleaned_data['derived_secure_hash'])
-            print(my_derived_secure_hash)
-
-            #check to see new is saved
-            
-            print("\n")
-            print(secret)
-            print("\n")
-            secret.store_date = datetime.now()
-            secret.derived_secure_hash = my_derived_secure_hash
-
-            #new_user.save()
-            secret.save()
+            my_derived_secure_hash = derived_secure_hash.derived_secure_hash_def(form.cleaned_data['authenticator'])
+            authenticator = form.save(commit=False)
+            authenticator.store_date = datetime.now()
+            authenticator.authenticator = my_derived_secure_hash
+            authenticator.save()
             return redirect("home")
     else:
-        return render(request, "app/secret.html", {"form" : form})
+        return render(request, "app/create_authenticator.html", {"form" : form})
 
 def about(request):
     return render(request, "app/about.html")

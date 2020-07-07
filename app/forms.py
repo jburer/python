@@ -10,4 +10,4 @@ class LogMessageForm(forms.ModelForm):
 class AuthenticatorStorageForm(forms.ModelForm):
     class Meta:
         model = AuthenticatorStorage
-        fields = ("derived_secure_hash",) # NOTE: the trailing comma is required
+        fields = ("authenticator",) # NOTE: the trailing comma is required

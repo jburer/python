@@ -4,7 +4,7 @@ from app.models import AuthenticatorStorage
 
 home_list_view = views.HomeListView.as_view(
     queryset=AuthenticatorStorage.objects.order_by("-store_date")[:5], 
-    context_object_name = "secret_list",
+    context_object_name = "authenticator_list",
     template_name = "app/home.html"
 )
 
@@ -14,5 +14,5 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("contact/", views.contact, name="contact"),
     path("log/", views.log_message, name="log"),
-    path("secret/", views.store_secret, name="secret"),
+    path("create_authenticator/", views.create_authenticator, name="create_authenticator"),
 ]

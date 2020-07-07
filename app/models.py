@@ -13,10 +13,10 @@ class LogMessage(models.Model):
 
 class AuthenticatorStorage(models.Model):
     store_date = models.DateTimeField(("date logged"), auto_now=False, auto_now_add=False)
-    derived_secure_hash = models.CharField(max_length=300)
+    authenticator = models.CharField(max_length=64)
 
     def __str__(self):
-        """Returns a string representation of a secret"""
+        """Returns a string representation of an authenticator"""
         date = timezone.localtime(self.store_date)
-        return f"'{self.derived_secure_hash}' logged on {date.strftime('%A, %d %B, %Y at %X')}"
+        return f"'{self.authenticator}' logged on {date.strftime('%A, %d %B, %Y at %X')}"
         
