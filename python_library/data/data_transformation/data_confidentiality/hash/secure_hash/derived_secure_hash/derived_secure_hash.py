@@ -39,7 +39,7 @@ def derived_secure_hash_def(authenticator):
     derived_secure_hash_length = None
 
     try:
-        dk = hashlib.pbkdf2_hmac(secure_hash_algorithm_name, authenticator_as_bytes, random_number_as_bytes, iterations)
+        dk = hashlib.pbkdf2_hmac(secure_hash_algorithm_name, authenticator_as_bytes, random_number_as_bytes, iterations, derived_secure_hash_length)
         dk.hex()
         return dk.hex()
     except Exception as err:
