@@ -3,7 +3,7 @@ from python_library.product_service.operations.event.log import log
 import hashlib
 
 #authenticator
-from python_library.identity_and_access.identity.authenticator import authenticator
+from python_library.identity_and_access.identity.authenticator import authenticator_generation
 
 #secure hash
 from python_library.data.data_transformation.data_confidentiality.hash.secure_hash import secure_hash_algorithm

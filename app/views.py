@@ -9,11 +9,12 @@ from django.views.generic import ListView
 
 from app.forms import LogMessageForm
 from app.models import LogMessage
-from app.forms import AuthenticatorStorageForm
+from app.forms import AuthenticatorGenerationForm
 from app.models import AuthenticatorStorage
 
 from python_library.data.data_transformation.data_confidentiality.encryption import encryption
 from python_library.data.data_transformation.data_confidentiality.hash.secure_hash.derived_secure_hash import derived_secure_hash
+from python_library.identity_and_access.identity.authenticator import authenticator_exchange
 
 # Create your views here.
 class HomeListView(ListView):
@@ -27,6 +28,7 @@ class HomeListView(ListView):
 def app(request, data):
     myobject = []
     myobject.append(derived_secure_hash.derived_secure_hash_def(data))
+    #myobject.append(authenticator_generation.authenticator_generation_def(data))
 
     content = ''
     for x in myobject:
@@ -53,8 +55,8 @@ def log_message(request):
     else:
         return render(request, "app/log_message.html", {"form" : form})
 
-def create_authenticator(request):
-    form = AuthenticatorStorageForm(request.POST or None)
+def authenticator_generation(request):
+    form = AuthenticatorGenerationForm(request.POST or None)
 
     if request.method == "POST":
         if form.is_valid():
@@ -65,7 +67,7 @@ def create_authenticator(request):
             authenticator.save()
             return redirect("home")
     else:
-        return render(request, "app/create_authenticator.html", {"form" : form})
+        return render(request, "app/authenticator_generation.html", {"form" : form})
 
 def about(request):
     return render(request, "app/about.html")

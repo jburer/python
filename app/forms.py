@@ -7,7 +7,7 @@ class LogMessageForm(forms.ModelForm):
         model = LogMessage
         fields = ("message",) # NOTE: the trailing comma is required
 
-class AuthenticatorStorageForm(forms.ModelForm):
+class AuthenticatorGenerationForm(forms.ModelForm):
     class Meta:
         model = AuthenticatorStorage
         fields = ("authenticator",) # NOTE: the trailing comma is required

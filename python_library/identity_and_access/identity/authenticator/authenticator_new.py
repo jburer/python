@@ -5,7 +5,7 @@ class Authenticator:
 
     def authenticator_generation_def(self):
         try:
-            authentiator = authenticator
+            authentiator = 'password'
             return authentiator
         except Exception as err:
             log.logger.debug(err, exc_info=True)
@@ -17,3 +17,9 @@ class Authenticator:
         except Exception as err:
             log.logger.debug(err, exc_info=True)
 
+    def authenticator_exchange_def(self, authenticator):
+        try:
+            authentiator = authenticator
+            return authentiator
+        except Exception as err:
+            log.logger.debug(err, exc_info=True)
