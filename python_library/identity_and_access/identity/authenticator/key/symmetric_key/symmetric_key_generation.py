@@ -8,7 +8,7 @@ from cryptography.hazmat.primitives.asymmetric import dh
 from python_library.product_service.operations.event.log import log
 
 def symmetric_key_generation_def():
-    """ Symmetric Key Generation Function """
+    """ Symmetric Key Generation Function (Using an Asymmetric Algorithm) """
 
     # Generate some parameters. These can be reused.
     parameters = dh.generate_parameters(generator=2, key_size=2048, backend=default_backend())
@@ -24,7 +24,7 @@ def symmetric_key_generation_def():
 
         #send public key
 
-        #receive pulbic key
+        #receive public key
         peer_symmetric_public_key = peer_private_key.public_key()
 
         # Generate the symmetric key .
