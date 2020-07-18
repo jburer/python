@@ -22,7 +22,10 @@ def derived_secure_hash_def(authenticator):
     #authorize execution
 
     #convert authenticator to bytes
-    authenticator_as_bytes = byte_conversion.byte_conversion_def(authenticator)
+    if type(authenticator) is bytes:
+        authenticator_as_bytes = authenticator
+    else:
+        authenticator_as_bytes = byte_conversion.byte_conversion_def(authenticator)
     
     #establish secure hash algorithm (as str)
     secure_hash_algorithm_name = secure_hash_algorithm.secure_hash_algorithm_def()

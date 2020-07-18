@@ -3,7 +3,6 @@
 import os
 import sys
 
-
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web_project.settings')
     try:
@@ -18,4 +17,8 @@ def main():
 
 
 if __name__ == '__main__':
+    
+    #print("\n")
+    #print(sys.path)
+    #print("\n")
     main()

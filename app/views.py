@@ -27,8 +27,8 @@ class HomeListView(ListView):
 
 def app(request, data):
     myobject = []
-    myobject.append(derived_secure_hash.derived_secure_hash_def(data))
-    #myobject.append(authenticator_generation.authenticator_generation_def(data))
+    #myobject.append(derived_secure_hash.derived_secure_hash_def(data))
+    myobject.append(authenticator_exchange.authenticator_exchange_def(data))
 
     content = ''
     for x in myobject:
