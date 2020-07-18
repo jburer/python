@@ -17,8 +17,4 @@ def main():
 
 
 if __name__ == '__main__':
-    
-    #print("\n")
-    #print(sys.path)
-    #print("\n")
     main()

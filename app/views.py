@@ -15,6 +15,7 @@ from app.models import AuthenticatorStorage
 from python_library.data.data_transformation.data_confidentiality.encryption import encryption
 from python_library.data.data_transformation.data_confidentiality.hash.secure_hash.derived_secure_hash import derived_secure_hash
 from python_library.identity_and_access.identity.authenticator import authenticator_exchange
+from python_library.identity_and_access.identity.authenticator.key.symmetric_key import symmetric_key_generation
 
 # Create your views here.
 class HomeListView(ListView):
@@ -28,7 +29,8 @@ class HomeListView(ListView):
 def app(request, data):
     myobject = []
     #myobject.append(derived_secure_hash.derived_secure_hash_def(data))
-    myobject.append(authenticator_exchange.authenticator_exchange_def(data))
+    #myobject.append(authenticator_exchange.authenticator_exchange_def(data))
+    myobject.append(symmetric_key_generation.symmetric_key_generation_def())
 
     content = ''
     for x in myobject:

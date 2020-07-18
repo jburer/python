@@ -9,6 +9,7 @@ from python_library.data.data_transformation.data_confidentiality.encryption imp
 from python_library.identity_and_access.identity.authenticator import authenticator_storage
 
 def authenticator_exchange_def(authenticator):
+    """ Transfer the authenticator encrpyted """
 
     #key generation
     key = key_generation.key_generation_def()
@@ -23,7 +24,7 @@ def authenticator_exchange_def(authenticator):
     authenticator = decryption.decryption_def(key, ciphertext)
 
     try:
-        key = key
-        return key, ciphertext, authenticator
+        mykey = key
+        return mykey, ciphertext, authenticator
     except Exception as err:
         log.logger.debug(err, exc_info=True)

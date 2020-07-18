@@ -1,11 +1,11 @@
-from pathlib import Path
-from python_library.product_service.operations.event.log import log
+""" Encryption Module """
 
-#encryption
+#from pathlib import Path
 from cryptography.fernet import Fernet
 
-#byte conversion
+from python_library.product_service.operations.event.log import log
 from python_library.data.data_transformation.type_conversion import byte_conversion
+
 
 def encryption_def(key, data):
 

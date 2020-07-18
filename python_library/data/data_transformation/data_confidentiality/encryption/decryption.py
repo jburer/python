@@ -1,10 +1,8 @@
 from pathlib import Path
-from python_library.product_service.operations.event.log import log
 
-#decryption
 from cryptography.fernet import Fernet
 
-#byte conversion
+from python_library.product_service.operations.event.log import log
 from python_library.data.data_transformation.type_conversion import byte_conversion
 
 def decryption_def(key, ciphertext):
