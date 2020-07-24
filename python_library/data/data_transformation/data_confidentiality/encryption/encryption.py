@@ -1,13 +1,11 @@
 """ Encryption Module """
 
-#from pathlib import Path
 from cryptography.fernet import Fernet
-
 from python_library.product_service.operations.event.log import log
 from python_library.data.data_transformation.type_conversion import byte_conversion
 
-
 def encryption_def(key, data):
+    """ Encryption Function """
 
     #create encrypted object
     encrypted_object = Fernet(key)

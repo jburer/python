@@ -1,9 +1,9 @@
-from pathlib import Path
+""" Key Generation Module """
+from cryptography.fernet import Fernet
 from python_library.product_service.operations.event.log import log
 
-from cryptography.fernet import Fernet
-
 def key_generation_def():
+    """ Key Generation Function """
 
     try:
         key = Fernet.generate_key()

@@ -1,7 +1,8 @@
-from pathlib import Path
-from python_library.product_service.operations.event.log import log
+""" Authenticator Exchange """
 
-from python_library.identity_and_access.identity.authenticator.key import key_generation
+from python_library.product_service.operations.event.log import log
+#from python_library.identity_and_access.identity.authenticator.key import key_generation
+from python_library.identity_and_access.identity.authenticator.key.shared_key import shared_key_generation
 from python_library.data.data_transformation.data_confidentiality.encryption import encryption
 from python_library.data.data_transformation.data_confidentiality.encryption import decryption
 
@@ -11,20 +12,21 @@ from python_library.identity_and_access.identity.authenticator import authentica
 def authenticator_exchange_def(authenticator):
     """ Transfer the authenticator encrpyted """
 
-    #key generation
-    key = key_generation.key_generation_def()
+    # Key generation
+    #shared_key = key_generation.key_generation_def()
+    shared_key = shared_key_generation.shared_key_generation_def()
 
-    #TEMP store key
-    authenticator_storage.authenticator_storage_def(key)
+    # TEMP store key
+    authenticator_storage.authenticator_storage_def(shared_key)
 
-    #encryption
-    ciphertext = encryption.encryption_def(key, authenticator)
+    # Encryption
+    ciphertext = encryption.encryption_def(shared_key, authenticator)
 
-    #decryption
-    authenticator = decryption.decryption_def(key, ciphertext)
+    # Decryption
+    authenticator = decryption.decryption_def(shared_key, ciphertext)
 
     try:
-        mykey = key
+        mykey = shared_key
         return mykey, ciphertext, authenticator
     except Exception as err:
         log.logger.debug(err, exc_info=True)
