@@ -1,11 +1,8 @@
-""" Aymmetric Key Generation (and Exchange) Module """
+""" Private Key Generation Module using RSA """
 
 from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import rsa
-from cryptography.hazmat.primitives.asymmetric import padding
-#from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 
 from python_library.product_service.operations.event.log import log
 
@@ -22,8 +19,8 @@ from python_library.product_service.operations.event.log import log
 #        format=serialization.PublicFormat.PKCS1)
 #    )
 
-def asymmetric_key_generation_def():
-    """ Aymmetric Key Generation Function """
+def private_key_generation_rsa_def():
+    """ Private Key Generation Function using RSA """
 
     try:
         # Generate a private key for use in the exchange.
@@ -40,16 +37,6 @@ def asymmetric_key_generation_def():
                 format=serialization.PrivateFormat.PKCS8,
                 encryption_algorithm=serialization.NoEncryption()))
 
-        # Generate a public key for use in the exchange.
-        asymmetric_public_key = asymmetric_private_key.public_key()
-
-        #send public key
-
-        #receive public key
-        #peer_symmetric_public_key = peer_private_key.public_key()
-
-        # Generate the symmetric key .
-        #symmetric_key = symmetric_private_key.exchange(peer_symmetric_public_key)
-        return asymmetric_private_key, asymmetric_public_key #, symmetric_key
+        return asymmetric_private_key
     except Exception as err:
         log.logger.debug(err, exc_info=True)
