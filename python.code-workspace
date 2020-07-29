@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": ".venv/bin/python",
+		"python.pythonPath": ".venv/bin/python3",
 		"git.ignoreLimitWarning": true
 	}
 }
