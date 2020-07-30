@@ -6,6 +6,10 @@
 	],
 	"settings": {
 		"python.pythonPath": ".venv/bin/python3",
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"python.linting.pylintArgs": [
+			"--init-hook",
+			"import sys; sys.path.append('/Users/jimburer/GitHub/python/python_library')"
+		]
 	}
 }
