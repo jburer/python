@@ -1,8 +1,7 @@
-from pathlib import Path
-from python_library.product_service.operations.event.log import log
-
-from python_library.data.data_transformation.data_confidentiality.hash.secure_hash import secure_hash_algorithm
 import hashlib
+from python_library.product_service.operations.event.log import log
+from python_library.data.data_transformation.data_confidentiality.hash.secure_hash import secure_hash_algorithm
+
 
 def secure_hash_def(data):
     try:
@@ -10,5 +9,5 @@ def secure_hash_def(data):
         secure_hash.update(data)
         return secure_hash
     except Exception as err:
-        log.error_logging_def(err, Path(__file__).stem)
+        log.logger.debug(err, exc_info=True)
 
