@@ -1,0 +1,6 @@
+{
+    "policy" : 
+    {
+        "secure_pseudorandom_number_byte_size" : 32
+    }
+}

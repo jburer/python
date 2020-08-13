@@ -12,12 +12,13 @@ from app.models import LogMessage
 from app.forms import AuthenticatorGenerationForm
 from app.models import AuthenticatorStorage
 
-from python_library.data.data_transformation.data_confidentiality.encryption import encryption
-from python_library.data.data_transformation.data_confidentiality.hash.secure_hash.derived_secure_hash import derived_secure_hash
-from python_library.identity_and_access.identity.authenticator import authenticator_exchange
-from python_library.identity_and_access.identity.authenticator.key.shared_key import shared_key_generation
-from python_library.identity_and_access.identity.authenticator.key.asymmetric_key import asymmetric_key_generation
-from python_library.identity_and_access.identity.authenticator.password import password_generation
+#from python_library.data.data_transformation.data_confidentiality.encryption import encryption
+#from python_library.data.data_transformation.data_confidentiality.hash.secure_hash.derived_secure_hash import derived_secure_hash
+#from python_library.identity_and_access.identity.authenticator import authenticator_exchange
+#from python_library.identity_and_access.identity.authenticator.key.shared_key import shared_key_generation
+#from python_library.identity_and_access.identity.authenticator.key.asymmetric_key import asymmetric_key_generation
+#from python_library.identity_and_access.identity.authenticator.password import password_generation
+from python_library.data.information.algorithm.random_number.pseudorandom_number import secure_pseudorandom_number
 
 # Create your views here.
 class HomeListView(ListView):
@@ -34,7 +35,8 @@ def app(request, data):
     #myobject.append(authenticator_exchange.authenticator_exchange_def(data))
     #myobject.append(symmetric_key_generation.symmetric_key_generation_def())
     #myobject.append(asymmetric_key_generation.asymmetric_key_generation_def())
-    myobject.append(password_generation.password_generation_def())
+    #myobject.append(password_generation.password_generation_def())
+    myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def())
 
     content = ''
     for x in myobject:
