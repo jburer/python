@@ -36,7 +36,7 @@ def app(request, data):
     #myobject.append(symmetric_key_generation.symmetric_key_generation_def())
     #myobject.append(asymmetric_key_generation.asymmetric_key_generation_def())
     #myobject.append(password_generation.password_generation_def())
-    myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def())
+    myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(byte_size = 31))
 
     content = ''
     for x in myobject:
