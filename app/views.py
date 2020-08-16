@@ -19,6 +19,8 @@ from app.models import AuthenticatorStorage
 #from python_library.identity_and_access.identity.authenticator.key.asymmetric_key import asymmetric_key_generation
 #from python_library.identity_and_access.identity.authenticator.password import password_generation
 from python_library.data.information.algorithm.random_number.pseudorandom_number import secure_pseudorandom_number
+from python_library.data.data_transformation.data_confidentiality.hash import hash_alt
+#from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
 
 # Create your views here.
 class HomeListView(ListView):
@@ -36,11 +38,13 @@ def app(request, data):
     #myobject.append(symmetric_key_generation.symmetric_key_generation_def())
     #myobject.append(asymmetric_key_generation.asymmetric_key_generation_def())
     #myobject.append(password_generation.password_generation_def())
-    myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(byte_size = 31))
+    myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(31))
+    myobject.append(hash_alt.hash_alt_def(data))
+    #myobject.append(secure_hash.secure_hash_def(data))
 
     content = ''
     for x in myobject:
-        content += str(x)
+        content += str(x) + '<p>'
 
     return render(
         request,

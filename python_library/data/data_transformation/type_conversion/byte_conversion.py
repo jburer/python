@@ -1,4 +1,3 @@
-from pathlib import Path
 from python_library.product_service.operations.event.log import log
 
 def byte_conversion_def(in_bytes):   

@@ -1,6 +1,31 @@
 {
     "policy" : 
     {
-        "secure_pseudorandom_number_byte_size" : 32
+        "data" : 
+        {
+            "information" : 
+            {
+                "algorithm" : 
+                {
+                    "random_number" : 
+                    {
+                        "pseudorandom_number" : 
+                        {
+                            "secure_pseudorandom_number_byte_size" : 32
+                        }
+                    }
+                }
+            },
+            "data_transformation" : 
+            {
+                "data_confidentiality" : 
+                {
+                    "hash" : 
+                    {
+                        "secure_hash" : ["sha224", "sha256", "sha384", "sha512", "sha3_224", "sha3_256", "sha3_384", "sha3_512"]
+                    }
+                }
+            } 
+        }           
     }
 }
