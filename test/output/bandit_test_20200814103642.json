@@ -5,7 +5,7 @@
       "reason": "syntax error while parsing AST from file"
     }
   ],
-  "generated_at": "2020-08-14T13:52:44Z",
+  "generated_at": "2020-08-14T14:36:42Z",
   "metrics": {
     "./app/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,

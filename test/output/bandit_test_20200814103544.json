@@ -1,13 +1,13 @@
 {
   "errors": [
     {
-      "filename": "./python_library/business/grc/governance/policy/policy_test/policy_test.py",
+      "filename": "../python_library/business/grc/governance/policy/policy_test/policy_test.py",
       "reason": "syntax error while parsing AST from file"
     }
   ],
-  "generated_at": "2020-08-14T13:52:44Z",
+  "generated_at": "2020-08-14T14:35:45Z",
   "metrics": {
-    "./app/__init__.py": {
+    "../app/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -19,7 +19,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./app/admin.py": {
+    "../app/admin.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -31,7 +31,7 @@
       "loc": 1,
       "nosec": 0
     },
-    "./app/apps.py": {
+    "../app/apps.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -43,7 +43,7 @@
       "loc": 3,
       "nosec": 0
     },
-    "./app/forms.py": {
+    "../app/forms.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -55,7 +55,7 @@
       "loc": 11,
       "nosec": 0
     },
-    "./app/migrations/0001_initial.py": {
+    "../app/migrations/0001_initial.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -67,7 +67,7 @@
       "loc": 15,
       "nosec": 0
     },
-    "./app/migrations/0002_authenticatorstorage.py": {
+    "../app/migrations/0002_authenticatorstorage.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -79,7 +79,7 @@
       "loc": 15,
       "nosec": 0
     },
-    "./app/migrations/0003_auto_20200707_1329.py": {
+    "../app/migrations/0003_auto_20200707_1329.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -91,7 +91,7 @@
       "loc": 12,
       "nosec": 0
     },
-    "./app/migrations/0004_auto_20200707_1335.py": {
+    "../app/migrations/0004_auto_20200707_1335.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -103,7 +103,7 @@
       "loc": 12,
       "nosec": 0
     },
-    "./app/migrations/__init__.py": {
+    "../app/migrations/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -115,7 +115,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./app/models.py": {
+    "../app/models.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -127,7 +127,7 @@
       "loc": 16,
       "nosec": 0
     },
-    "./app/tests.py": {
+    "../app/tests.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -139,7 +139,7 @@
       "loc": 1,
       "nosec": 0
     },
-    "./app/urls.py": {
+    "../app/urls.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -151,19 +151,19 @@
       "loc": 16,
       "nosec": 0
     },
-    "./app/views.py": {
-      "CONFIDENCE.HIGH": 1.0,
+    "../app/views.py": {
+      "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 1.0,
       "CONFIDENCE.MEDIUM": 0.0,
       "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 1.0,
+      "SEVERITY.HIGH": 0.0,
       "SEVERITY.LOW": 1.0,
       "SEVERITY.MEDIUM": 0.0,
       "SEVERITY.UNDEFINED": 0.0,
       "loc": 60,
       "nosec": 0
     },
-    "./manage.py": {
+    "../manage.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -175,7 +175,7 @@
       "loc": 16,
       "nosec": 0
     },
-    "./python_library/__init__.py": {
+    "../python_library/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -187,7 +187,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/business/grc/governance/policy/policy.py": {
+    "../python_library/business/grc/governance/policy/policy.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -199,7 +199,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/business/grc/governance/policy/policy_test/__init__.py": {
+    "../python_library/business/grc/governance/policy/policy_test/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -211,11 +211,11 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/business/grc/governance/policy/policy_test/policy_test.py": {
+    "../python_library/business/grc/governance/policy/policy_test/policy_test.py": {
       "loc": 1,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/encryption/__init__.py": {
+    "../python_library/data/data_transformation/data_confidentiality/encryption/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -227,7 +227,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/encryption/decryption.py": {
+    "../python_library/data/data_transformation/data_confidentiality/encryption/decryption.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -239,7 +239,7 @@
       "loc": 15,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/encryption/encryption.py": {
+    "../python_library/data/data_transformation/data_confidentiality/encryption/encryption.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -251,7 +251,7 @@
       "loc": 13,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/__init__.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -263,7 +263,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/hash_alt.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/hash_alt.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -275,7 +275,7 @@
       "loc": 14,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/hmacing.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/hmacing.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -287,7 +287,7 @@
       "loc": 11,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/__init__.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/secure_hash/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -299,7 +299,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/derived_secure_hash/__init__.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/secure_hash/derived_secure_hash/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -311,7 +311,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/derived_secure_hash/derived_secure_hash.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/secure_hash/derived_secure_hash/derived_secure_hash.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -323,7 +323,7 @@
       "loc": 24,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/secure_hash.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/secure_hash/secure_hash.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -335,7 +335,7 @@
       "loc": 11,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/secure_hash_algorithm.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/secure_hash/secure_hash_algorithm.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -347,7 +347,7 @@
       "loc": 11,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/xor.py": {
+    "../python_library/data/data_transformation/data_confidentiality/hash/xor.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -359,7 +359,7 @@
       "loc": 19,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/type_conversion/__init__.py": {
+    "../python_library/data/data_transformation/type_conversion/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -371,7 +371,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/type_conversion/byte_conversion.py": {
+    "../python_library/data/data_transformation/type_conversion/byte_conversion.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -383,7 +383,7 @@
       "loc": 13,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/type_conversion/number_conversion/int_conversion.py": {
+    "../python_library/data/data_transformation/type_conversion/number_conversion/int_conversion.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -395,7 +395,7 @@
       "loc": 10,
       "nosec": 0
     },
-    "./python_library/data/information/algorithm/random_number/pseudorandom_number/secure_pseudorandom_number.py": {
+    "../python_library/data/information/algorithm/random_number/pseudorandom_number/secure_pseudorandom_number.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -407,7 +407,7 @@
       "loc": 10,
       "nosec": 0
     },
-    "./python_library/identity_and_access/__init__.py": {
+    "../python_library/identity_and_access/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -419,7 +419,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/entitlement/__init__.py": {
+    "../python_library/identity_and_access/entitlement/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -431,7 +431,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/entitlement/entitlement.py": {
+    "../python_library/identity_and_access/entitlement/entitlement.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -443,7 +443,7 @@
       "loc": 12,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/__init__.py": {
+    "../python_library/identity_and_access/identity/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -455,7 +455,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/__init__.py": {
+    "../python_library/identity_and_access/identity/authenticator/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -467,7 +467,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/authenticator_exchange.py": {
+    "../python_library/identity_and_access/identity/authenticator/authenticator_exchange.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -479,7 +479,7 @@
       "loc": 17,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/authenticator_generation.py": {
+    "../python_library/identity_and_access/identity/authenticator/authenticator_generation.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -491,7 +491,7 @@
       "loc": 8,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/authenticator_new.py": {
+    "../python_library/identity_and_access/identity/authenticator/authenticator_new.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -503,7 +503,7 @@
       "loc": 21,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/authenticator_storage.py": {
+    "../python_library/identity_and_access/identity/authenticator/authenticator_storage.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -515,7 +515,7 @@
       "loc": 12,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/__init__.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -527,7 +527,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/asymmetric_key/__init__.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/asymmetric_key/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -539,7 +539,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/asymmetric_key/asymmetric_key_generation.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/asymmetric_key/asymmetric_key_generation.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -551,7 +551,7 @@
       "loc": 24,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/key.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/key.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -563,7 +563,7 @@
       "loc": 10,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/key_generation.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/key_generation.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -575,7 +575,7 @@
       "loc": 10,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/key_storage.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/key_storage.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -587,7 +587,7 @@
       "loc": 8,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/private_key/__init__.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/private_key/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -599,7 +599,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/private_key/private_key_generation_dh.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/private_key/private_key_generation_dh.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -611,7 +611,7 @@
       "loc": 12,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/private_key/private_key_generation_rsa.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/private_key/private_key_generation_rsa.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -623,7 +623,7 @@
       "loc": 21,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/public_key/__init__.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/public_key/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -635,7 +635,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/public_key/public_key_generation_dh.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/public_key/public_key_generation_dh.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -647,7 +647,7 @@
       "loc": 12,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/public_key/public_key_generation_rsa.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/public_key/public_key_generation_rsa.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -659,7 +659,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/shared_key/__init__.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/shared_key/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -671,7 +671,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/key/shared_key/shared_key_generation.py": {
+    "../python_library/identity_and_access/identity/authenticator/key/shared_key/shared_key_generation.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -683,7 +683,7 @@
       "loc": 29,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/password/__init__.py": {
+    "../python_library/identity_and_access/identity/authenticator/password/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -695,7 +695,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/identity_and_access/identity/authenticator/password/password_generation.py": {
+    "../python_library/identity_and_access/identity/authenticator/password/password_generation.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -707,7 +707,7 @@
       "loc": 17,
       "nosec": 0
     },
-    "./python_library/product_service/operations/event/log/__init__.py": {
+    "../python_library/product_service/operations/event/log/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -719,7 +719,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/product_service/operations/event/log/log.py": {
+    "../python_library/product_service/operations/event/log/log.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -731,7 +731,7 @@
       "loc": 9,
       "nosec": 0
     },
-    "./python_library/product_service/operations/event/log/log_json.py": {
+    "../python_library/product_service/operations/event/log/log_json.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -743,7 +743,7 @@
       "loc": 15,
       "nosec": 0
     },
-    "./python_library/sftp/my_sftp.py": {
+    "../python_library/sftp/my_sftp.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 1.0,
@@ -755,7 +755,7 @@
       "loc": 41,
       "nosec": 0
     },
-    "./python_library/stats/__init__.py": {
+    "../python_library/stats/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -767,7 +767,7 @@
       "loc": 0,
       "nosec": 0
     },
-    "./python_library/stats/sizing.py": {
+    "../python_library/stats/sizing.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -779,7 +779,7 @@
       "loc": 10,
       "nosec": 0
     },
-    "./python_library/stats/typing.py": {
+    "../python_library/stats/typing.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -791,7 +791,7 @@
       "loc": 9,
       "nosec": 0
     },
-    "./python_library/tls/tls.py": {
+    "../python_library/tls/tls.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -804,11 +804,11 @@
       "nosec": 0
     },
     "_totals": {
-      "CONFIDENCE.HIGH": 1.0,
+      "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 1.0,
       "CONFIDENCE.MEDIUM": 1.0,
       "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 1.0,
+      "SEVERITY.HIGH": 0.0,
       "SEVERITY.LOW": 2.0,
       "SEVERITY.MEDIUM": 0.0,
       "SEVERITY.UNDEFINED": 0.0,
@@ -818,22 +818,8 @@
   },
   "results": [
     {
-      "code": "39     #myobject.append(password_generation.password_generation_def())\n40     myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(byte_size = 31))\n41     myobject.append(hash_alt.hash_alt_def(data))\n",
-      "filename": "./app/views.py",
-      "issue_confidence": "HIGH",
-      "issue_severity": "HIGH",
-      "issue_text": "The pseduorandom number is too small to be used in a security context.Pseudorandom numbers must be at least 32 bytes to be considered secure.",
-      "line_number": 40,
-      "line_range": [
-        40
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/latest/plugins/b351_secure_pseudorandom_number_test.html",
-      "test_id": "B351",
-      "test_name": "secure_pseudorandom_number_test"
-    },
-    {
       "code": "40     myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(byte_size = 31))\n41     myobject.append(hash_alt.hash_alt_def(data))\n42 \n",
-      "filename": "./app/views.py",
+      "filename": "../app/views.py",
       "issue_confidence": "LOW",
       "issue_severity": "LOW",
       "issue_text": "Hash functions of this type should only be used for checksums. This algorithm is not cryptographically strong and should not be used for authentication or digital signatures. Use secure hash functions for anything cryptographic in nature.",
@@ -847,7 +833,7 @@
     },
     {
       "code": "63     try: \n64         s = sftp.Connection(host='127.0.0.1', username='foo', password='pass')\n65 \n",
-      "filename": "./python_library/sftp/my_sftp.py",
+      "filename": "../python_library/sftp/my_sftp.py",
       "issue_confidence": "MEDIUM",
       "issue_severity": "LOW",
       "issue_text": "Possible hardcoded password: 'pass'",

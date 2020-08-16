@@ -5,7 +5,7 @@
       "reason": "syntax error while parsing AST from file"
     }
   ],
-  "generated_at": "2020-08-14T13:52:44Z",
+  "generated_at": "2020-08-14T16:20:55Z",
   "metrics": {
     "./app/__init__.py": {
       "CONFIDENCE.HIGH": 0.0,
@@ -152,12 +152,12 @@
       "nosec": 0
     },
     "./app/views.py": {
-      "CONFIDENCE.HIGH": 1.0,
-      "CONFIDENCE.LOW": 1.0,
+      "CONFIDENCE.HIGH": 0.0,
+      "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
       "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 1.0,
-      "SEVERITY.LOW": 1.0,
+      "SEVERITY.HIGH": 0.0,
+      "SEVERITY.LOW": 0.0,
       "SEVERITY.MEDIUM": 0.0,
       "SEVERITY.UNDEFINED": 0.0,
       "loc": 60,
@@ -265,17 +265,17 @@
     },
     "./python_library/data/data_transformation/data_confidentiality/hash/hash_alt.py": {
       "CONFIDENCE.HIGH": 0.0,
-      "CONFIDENCE.LOW": 0.0,
+      "CONFIDENCE.LOW": 2.0,
       "CONFIDENCE.MEDIUM": 0.0,
       "CONFIDENCE.UNDEFINED": 0.0,
       "SEVERITY.HIGH": 0.0,
-      "SEVERITY.LOW": 0.0,
+      "SEVERITY.LOW": 2.0,
       "SEVERITY.MEDIUM": 0.0,
       "SEVERITY.UNDEFINED": 0.0,
       "loc": 14,
       "nosec": 0
     },
-    "./python_library/data/data_transformation/data_confidentiality/hash/hmacing.py": {
+    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash.py": {
       "CONFIDENCE.HIGH": 0.0,
       "CONFIDENCE.LOW": 0.0,
       "CONFIDENCE.MEDIUM": 0.0,
@@ -284,19 +284,7 @@
       "SEVERITY.LOW": 0.0,
       "SEVERITY.MEDIUM": 0.0,
       "SEVERITY.UNDEFINED": 0.0,
-      "loc": 11,
-      "nosec": 0
-    },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/__init__.py": {
-      "CONFIDENCE.HIGH": 0.0,
-      "CONFIDENCE.LOW": 0.0,
-      "CONFIDENCE.MEDIUM": 0.0,
-      "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 0.0,
-      "SEVERITY.LOW": 0.0,
-      "SEVERITY.MEDIUM": 0.0,
-      "SEVERITY.UNDEFINED": 0.0,
-      "loc": 0,
+      "loc": 13,
       "nosec": 0
     },
     "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/derived_secure_hash/__init__.py": {
@@ -321,42 +309,6 @@
       "SEVERITY.MEDIUM": 0.0,
       "SEVERITY.UNDEFINED": 0.0,
       "loc": 24,
-      "nosec": 0
-    },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/secure_hash.py": {
-      "CONFIDENCE.HIGH": 0.0,
-      "CONFIDENCE.LOW": 0.0,
-      "CONFIDENCE.MEDIUM": 0.0,
-      "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 0.0,
-      "SEVERITY.LOW": 0.0,
-      "SEVERITY.MEDIUM": 0.0,
-      "SEVERITY.UNDEFINED": 0.0,
-      "loc": 11,
-      "nosec": 0
-    },
-    "./python_library/data/data_transformation/data_confidentiality/hash/secure_hash/secure_hash_algorithm.py": {
-      "CONFIDENCE.HIGH": 0.0,
-      "CONFIDENCE.LOW": 0.0,
-      "CONFIDENCE.MEDIUM": 0.0,
-      "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 0.0,
-      "SEVERITY.LOW": 0.0,
-      "SEVERITY.MEDIUM": 0.0,
-      "SEVERITY.UNDEFINED": 0.0,
-      "loc": 11,
-      "nosec": 0
-    },
-    "./python_library/data/data_transformation/data_confidentiality/hash/xor.py": {
-      "CONFIDENCE.HIGH": 0.0,
-      "CONFIDENCE.LOW": 0.0,
-      "CONFIDENCE.MEDIUM": 0.0,
-      "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 0.0,
-      "SEVERITY.LOW": 0.0,
-      "SEVERITY.MEDIUM": 0.0,
-      "SEVERITY.UNDEFINED": 0.0,
-      "loc": 19,
       "nosec": 0
     },
     "./python_library/data/data_transformation/type_conversion/__init__.py": {
@@ -804,42 +756,42 @@
       "nosec": 0
     },
     "_totals": {
-      "CONFIDENCE.HIGH": 1.0,
-      "CONFIDENCE.LOW": 1.0,
+      "CONFIDENCE.HIGH": 0.0,
+      "CONFIDENCE.LOW": 2.0,
       "CONFIDENCE.MEDIUM": 1.0,
       "CONFIDENCE.UNDEFINED": 0.0,
-      "SEVERITY.HIGH": 1.0,
-      "SEVERITY.LOW": 2.0,
+      "SEVERITY.HIGH": 0.0,
+      "SEVERITY.LOW": 3.0,
       "SEVERITY.MEDIUM": 0.0,
       "SEVERITY.UNDEFINED": 0.0,
-      "loc": 636,
+      "loc": 597,
       "nosec": 0
     }
   },
   "results": [
     {
-      "code": "39     #myobject.append(password_generation.password_generation_def())\n40     myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(byte_size = 31))\n41     myobject.append(hash_alt.hash_alt_def(data))\n",
-      "filename": "./app/views.py",
-      "issue_confidence": "HIGH",
-      "issue_severity": "HIGH",
-      "issue_text": "The pseduorandom number is too small to be used in a security context.Pseudorandom numbers must be at least 32 bytes to be considered secure.",
-      "line_number": 40,
-      "line_range": [
-        40
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/latest/plugins/b351_secure_pseudorandom_number_test.html",
-      "test_id": "B351",
-      "test_name": "secure_pseudorandom_number_test"
-    },
-    {
-      "code": "40     myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(byte_size = 31))\n41     myobject.append(hash_alt.hash_alt_def(data))\n42 \n",
-      "filename": "./app/views.py",
+      "code": "12         my_hash = hash(data_as_bytes)\n13         my_adler_hash = zlib.adler32(data_as_bytes)\n14         my_crc_hash = zlib.crc32(data_as_bytes)\n",
+      "filename": "./python_library/data/data_transformation/data_confidentiality/hash/hash_alt.py",
       "issue_confidence": "LOW",
       "issue_severity": "LOW",
       "issue_text": "Hash functions of this type should only be used for checksums. This algorithm is not cryptographically strong and should not be used for authentication or digital signatures. Use secure hash functions for anything cryptographic in nature.",
-      "line_number": 41,
+      "line_number": 13,
       "line_range": [
-        41
+        13
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/latest/plugins/b352_hash_alt_test.html",
+      "test_id": "B352",
+      "test_name": "hash_alt_test"
+    },
+    {
+      "code": "13         my_adler_hash = zlib.adler32(data_as_bytes)\n14         my_crc_hash = zlib.crc32(data_as_bytes)\n15         return my_hash, my_adler_hash, my_crc_hash\n",
+      "filename": "./python_library/data/data_transformation/data_confidentiality/hash/hash_alt.py",
+      "issue_confidence": "LOW",
+      "issue_severity": "LOW",
+      "issue_text": "Hash functions of this type should only be used for checksums. This algorithm is not cryptographically strong and should not be used for authentication or digital signatures. Use secure hash functions for anything cryptographic in nature.",
+      "line_number": 14,
+      "line_range": [
+        14
       ],
       "more_info": "https://bandit.readthedocs.io/en/latest/plugins/b352_hash_alt_test.html",
       "test_id": "B352",
