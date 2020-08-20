@@ -10,7 +10,7 @@ def secure_hash_def(algorithm, data):
 
     try:
         data_as_bytes = byte_conversion.byte_conversion_def(data)
-        secure_hash = hashlib.sha3_224()
+        secure_hash = hashlib.new(algorithm, data_as_bytes)
         secure_hash.update(data_as_bytes)
         return secure_hash.digest(), secure_hash.name, secure_hash.hexdigest()
     except Exception as err:

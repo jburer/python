@@ -7,7 +7,7 @@ def hash_alt_test(context):
     if isinstance(context.call_function_name_qual, str):
         qualname_list = context.call_function_name_qual.split('.')
         func = qualname_list[-1]
-        if ('zlib' in qualname_list and (func == 'adler32' or func == 'crc32')) or ('hash' in qualname_list and func == 'hash'):
+        if ('zlib' in qualname_list and func == 'adler32'):
             args = context.call_args
             keywords = context.call_keywords
             name = args[0] if args else keywords['name']

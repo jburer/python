@@ -20,7 +20,7 @@ from app.models import AuthenticatorStorage
 #from python_library.identity_and_access.identity.authenticator.password import password_generation
 from python_library.data.information.algorithm.random_number.pseudorandom_number import secure_pseudorandom_number
 from python_library.data.data_transformation.data_confidentiality.hash import hash_alt
-#from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
+from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
 
 # Create your views here.
 class HomeListView(ListView):
@@ -40,11 +40,11 @@ def app(request, data):
     #myobject.append(password_generation.password_generation_def())
     myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(31))
     myobject.append(hash_alt.hash_alt_def(data))
-    #myobject.append(secure_hash.secure_hash_def(data))
+    myobject.append(secure_hash.secure_hash_def("md5", data))
 
     content = ''
     for x in myobject:
-        content += str(x) + '<p>'
+        content += str(x)
 
     return render(
         request,

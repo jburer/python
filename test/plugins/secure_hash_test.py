@@ -3,33 +3,28 @@ import bandit
 from bandit.core import test_properties as test
 
 @test.checks('Call')
-@test.test_id('B352')
+@test.test_id('B353')
 def secure_hash_test(context):
-    if context.call_function_name == 'secure_pseudorandom_number_def':
-
-        with open("./policy/policy.json", "r") as policy:
-            policy_dict = json.load(policy)
-
-        if policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number_byte_size']:
-            secure_pseudorandom_number_byte_size = policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number_byte_size']
-
-        if context.get_call_arg_value('byte_size') <= secure_pseudorandom_number_byte_size:
-            return bandit.Issue(
-                severity = bandit.HIGH,
-                confidence = bandit.HIGH,
-                text = 'The pseduorandom number is too small to be used in a security context.' +  
-                    'Pseudorandom numbers must be at least ' + str(secure_pseudorandom_number_byte_size) + 
-                    ' bytes to be considered secure.',
-                lineno=context.node.lineno
-            )
-
-
     if isinstance(context.call_function_name_qual, str):
         qualname_list = context.call_function_name_qual.split('.')
         func = qualname_list[-1]
-        if 'hashlib' in qualname_list and func == 'new':
+        if ('secure_hash' in qualname_list and func == 'secure_hash_def'):
             args = context.call_args
             keywords = context.call_keywords
             name = args[0] if args else keywords['name']
-            if name.lower() in ('md4', 'md5'):
-                
+
+            with open("./policy/policy.json", "r") as policy:
+                policy_dict = json.load(policy)
+
+            if policy_dict['policy']['data']['data_transformation']['data_confidentiality']['hash']['secure_hash']:
+                secure_hash_algorithm = policy_dict['policy']['data']['data_transformation']['data_confidentiality']['hash']['secure_hash']
+
+            if name.lower() not in secure_hash_algorithm:
+                return bandit.Issue(
+                    severity = bandit.HIGH,
+                    confidence = bandit.HIGH,
+                    text = 'Cryptographically weak hash algorithm detected. ' +
+                    name + ' is considered weak and should not be used for cryptographic purposes. ' +
+                    'Please consult policy for acceptable secure hash algorithms.',
+                    lineno=context.node.lineno
+                )
