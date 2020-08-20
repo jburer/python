@@ -21,6 +21,7 @@ from app.models import AuthenticatorStorage
 from python_library.data.information.algorithm.random_number.pseudorandom_number import secure_pseudorandom_number
 from python_library.data.data_transformation.data_confidentiality.hash import hash_alt
 from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
+from python_library.data.data_transformation.data_confidentiality.encryption import encryption
 
 # Create your views here.
 class HomeListView(ListView):
@@ -41,6 +42,7 @@ def app(request, data):
     myobject.append(secure_pseudorandom_number.secure_pseudorandom_number_def(31))
     myobject.append(hash_alt.hash_alt_def(data))
     myobject.append(secure_hash.secure_hash_def("md5", data))
+    myobject.append(encryption.encryption_def(key, data))
 
     content = ''
     for x in myobject:
