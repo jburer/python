@@ -12,8 +12,8 @@ def secure_pseudorandom_number_test(context):
 
             with open("./policy/policy.json", "r") as policy:
                 policy_dict = json.load(policy)
-            if policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number_byte_size']:
-                secure_pseudorandom_number_byte_size = policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number_byte_size']
+            if policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number']['secure_pseudorandom_number_byte_size']:
+                secure_pseudorandom_number_byte_size = policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number']['secure_pseudorandom_number_byte_size']
 
             args = context.call_args
             keywords = context.call_keywords

@@ -11,7 +11,12 @@
                     {
                         "pseudorandom_number" : 
                         {
-                            "secure_pseudorandom_number_byte_size" : 32
+                            "pseudorandom_number_algorithm" : [],
+                            "secure_pseudorandom_number" : 
+                                {
+                                    "secure_pseudorandom_number_byte_size" : 32,
+                                    "secure_pseudorandom_number_algorithm" : []
+                                }
                         }
                     }
                 }
