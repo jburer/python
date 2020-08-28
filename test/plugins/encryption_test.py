@@ -2,7 +2,7 @@ import bandit
 from bandit.core import test_properties as test
 
 @test.checks('Call')
-@test.test_id('B352')
+@test.test_id('B354')
 def encryption_test(context):
     if isinstance(context.call_function_name_qual, str):
         qualname_list = context.call_function_name_qual.split('.')
