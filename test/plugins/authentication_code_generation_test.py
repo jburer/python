@@ -2,18 +2,12 @@ import bandit
 from bandit.core import test_properties as test
 
 @test.checks('Call')
-@test.test_id('B354')
-def encryption_test(context):
+@test.test_id('B356')
+def authentication_code_generation_test(context):
     if isinstance(context.call_function_name_qual, str):
         qualname_list = context.call_function_name_qual.split('.')
         func = qualname_list[-1]
-        if('os' or 'urandom') in qualname_list:
-
-            print('\n')
-            print(qualname_list)
-            print('\n')
-
-        if ('zlib' in qualname_list and func == 'adler32'):
+        if ('authentication_code_generation' in qualname_list and func == 'authentication_code_generation_def'):
             args = context.call_args
             keywords = context.call_keywords
             name = args[0] if args else keywords['name']

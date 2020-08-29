@@ -22,7 +22,7 @@ def secure_pseudorandom_number_length_test(context):
                 return bandit.Issue(
                     severity = bandit.HIGH,
                     confidence = bandit.HIGH,
-                    text = 'The pseduorandom number is too small to be used in a security context.' +  
+                    text = 'The pseduorandom number is too small to be used in a security context. ' +  
                         'Pseudorandom numbers must be at least ' + str(secure_pseudorandom_number_length) + 
                         ' bytes to be considered secure.',
                         lineno=context.node.lineno

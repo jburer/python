@@ -31,6 +31,20 @@
                     }
                 }
             } 
-        }           
+        },
+        "identity_and_access" : 
+            {
+                "identity" : 
+                {
+                    "authenticator" : 
+                    {
+                        "key" : 
+                            {
+                                "key_generation_length" : 32,
+                                "key_generation_module" : ["Fernet"]
+                            }
+                    }
+                }
+            }        
     }
 }
