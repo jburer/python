@@ -1,4 +1,3 @@
-from pathlib import Path
 from python_library.product_service.operations.event.log import log
 
 def key_storage_def():

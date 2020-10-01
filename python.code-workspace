@@ -5,11 +5,41 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "/usr/local/opt/python@3.8/bin/python3",
+		"python.pythonPath": "/usr/local/bin/python3",
 		"git.ignoreLimitWarning": true,
 		"python.linting.pylintArgs": [
 			"--init-hook",
 			"import sys; sys.path.append('/Users/jimburer/GitHub/python/python_library')"
+		]
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "GitHub:python_library.identity_and_access.identity.authenticator.key.retrieve_key_aws.create_data_key (python3.8)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "",
+					"lambdaHandler": "python_library.identity_and_access.identity.authenticator.key.retrieve_key_aws.create_data_key"
+				},
+				"lambda": {
+					"runtime": "python3.8",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"name": "Python: Django",
+				"type": "python",
+				"request": "launch",
+				"program": "${workspaceFolder}/manage.py",
+				"args": [
+					"runserver",
+					"--noreload"
+				],
+				"django": true
+			}
 		]
 	}
 }
