@@ -24,6 +24,12 @@ def create_data_key(cmk_id, aws_profile_name, key_spec='AES_256'):
 
     # Create data key
     kms_client = my_session.client('kms')
+    
+    print('\n')
+    print(kms_client._client_config.__dict__)
+    print('\n')
+
+
     try:
         response = kms_client.generate_data_key(KeyId=cmk_id, KeySpec=key_spec)
     except ClientError as e:

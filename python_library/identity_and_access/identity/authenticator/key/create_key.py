@@ -19,7 +19,7 @@ def create_key_def():
 
     try:
         #key = Fernet.generate_key()
-        key = create_key_asw.create_data_key( cmk_id, 'User')
+        key = create_key_asw.create_data_key( cmk_id, 'User2')
 
         print('\n')
         print(key)
