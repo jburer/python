@@ -7,10 +7,15 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.views.generic import ListView
 
+import boto3
+import boto3.session
+
 from app.forms import LogMessageForm
 from app.models import LogMessage
 from app.forms import AuthenticatorGenerationForm
 from app.models import AuthenticatorStorage
+
+
 
 #from python_library.data.data_transformation.data_confidentiality.hash import hash_alt
 #from python_library.identity_and_access.identity.authenticator import authenticator_exchange
@@ -22,6 +27,8 @@ from app.models import AuthenticatorStorage
 #from python_library.data.information.algorithm.random_number.pseudorandom_number import secure_pseudorandom_number
 #from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
 from python_library.identity_and_access.identity.authenticator.key import create_key
+from python_library.identity_and_access.identity.authenticator.key.key import Key
+from python_library.identity_and_access.identity import authenticate_identity
 #from python_library.identity_and_access.identity.authenticator.key import key_storage
 #from python_library.identity_and_access.identity.authenticator.key import key_retrieval
 #from python_library.data.data_transformation.data_confidentiality.hash import derived_secure_hash
@@ -66,6 +73,16 @@ def app(request, data):
 
     my_key = create_key.create_key_def()
     myobject.append(my_key)
+
+     # Authenticate Identity
+    session = authenticate_identity.authenticate_identity_def('User3')
+
+    # Connect to Service
+    #kms_client = session.client('kms')
+
+    # Create Key
+    my_other_key = Key.create_key()
+    myobject.append(my_other_key)
 
     #my_authentication_code = authentication_code_generation.authentication_code_generation_def(data, my_key)
     #myobject.append(my_authentication_code)

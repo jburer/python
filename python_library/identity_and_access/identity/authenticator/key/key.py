@@ -1,13 +1,26 @@
+""" Key Module """
+
 from cryptography.fernet import Fernet
-from python_library.product_service.operations.event.log import log
 
 class Key:
+    """ Key Class """
 
+    def __init__(self, length, time_to_live):
+        self.length = length
+        self.time_to_live = time_to_live
 
-    def key_generation_def(self):
+    @classmethod
+    def create_key(cls):
+        """ Create Key Function """
 
-        try:
-            key = Fernet.generate_key()
-            return key
-        except Exception as err:
-            log.logger.debug(err, exc_info=True)
+        return Fernet.generate_key()
+    
+    def encrypt_key(self):
+        """ Encrypt Key Function """
+        
+        pass
+
+    def decrypt_key(self):
+        """ Decrypt Key Function """
+        
+        pass

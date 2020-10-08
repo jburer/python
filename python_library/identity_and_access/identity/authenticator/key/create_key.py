@@ -8,10 +8,6 @@ def create_key_def():
     """ Create Key Function """
 
     #input policy
-    #with open("./policy/policy.json", "r") as policy:
-    #        policy_dict = json.load(policy)
-    #if policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number']:
-    #    secure_pseudorandom_number_module = policy_dict['policy']['data']['information']['algorithm']['random_number']['pseudorandom_number']['secure_pseudorandom_number']['secure_pseudorandom_number_module']
 
     #test policy
 
@@ -22,7 +18,7 @@ def create_key_def():
         key = create_key_asw.create_data_key( cmk_id, 'User2')
 
         print('\n')
-        print(key)
+        #print(key)
         print('\n')
 
         return key
