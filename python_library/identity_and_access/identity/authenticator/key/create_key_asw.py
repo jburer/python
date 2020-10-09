@@ -1,12 +1,10 @@
 """ Create Key Module (AWS) """
 
-import logging
 import base64
 from botocore.exceptions import ClientError
-from python_library.identity_and_access.identity import authenticate_identity
 from python_library.product_service.operations.event.log import log
 
-def create_data_key(cmk_id, aws_profile_name, key_spec='AES_256'):
+def create_data_key(kms_client, aws_profile):
     """Generate a data key to use when encrypting and decrypting data
 
     :param cmk_id: KMS CMK ID or ARN under which to generate and encrypt the
@@ -21,37 +19,31 @@ def create_data_key(cmk_id, aws_profile_name, key_spec='AES_256'):
     """
 
     # Input Policy
+    key_spec='AES_256'
+    cmk_id = 'c7004d4e-a313-4c6f-9999-893f6c3e068f'
 
     # Test Against Policy
 
-    # Authenticate Identity
-    session = authenticate_identity.authenticate_identity_def('User2')
-
-    # Connect to service
-    kms_client = session.client('kms')
-
-    # Create data key
+    # Create Data Key
     try:
         response = kms_client.generate_data_key(KeyId=cmk_id, KeySpec=key_spec)
 
-        print('\n')
-        #print(response)
-        print('\n')
+        # Record Authorization Success Event
+        message = '{"AWS" : {"Authorization" : {"Response" : "Success", "Profile" : "' + aws_profile + '"}}}'
+        log.logger.info(message, exc_info=True)
+
+        # Record Create Key Event
+        message = '{"AWS" : {"Create Key" : {"Response" : "Success", "Profile" : "' + aws_profile + '"}}}'
+        log.logger.info(message, exc_info=True)
 
     except ClientError as err:
-
-        print('\n')
-        logging.error(err)
-        print('\n')
-
+        # Record Authorization Failure Event
         if err.response['Error']['Code'] == 'AccessDeniedException':
-            log.logger.debug(err, exc_info=True)
-            logging.error(err)
+            message = '{"AWS" : {"Authorization" : {"Response" : "Failure", "Profile" : "' + aws_profile + '", "Error" : "AccessDeniedException", "Error Message" : "'
+            log.logger.info('%s %s %s' % (message, err, '"}}}'), exc_info=True)
         else:
             raise err
         return None, None
-    
-    
 
     # Return the encrypted and plaintext data key
     return response['CiphertextBlob'], base64.b64encode(response['Plaintext'])

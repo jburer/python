@@ -1,0 +1,7 @@
+[
+	{
+		"Source": "com.mycompany.myapp",
+		"DetailType": "AuthenticateIdentity",
+		"Detail": "{\"AuthenticationResponse\": \"Failure\"}"
+	}
+]

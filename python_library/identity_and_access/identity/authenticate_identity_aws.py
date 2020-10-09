@@ -1,12 +1,11 @@
 """ Authenticate Identity Module (for AWS) """
 
-import logging
 import boto3
 import boto3.session
 from botocore.exceptions import ProfileNotFound
 from python_library.product_service.operations.event.log import log
 
-def authenticate_identity_aws_def(aws_profile_name):
+def authenticate_identity_aws_def(aws_profile):
     """ Authenticate Identity Function (for AWS) """
 
     # Input Policy
@@ -15,21 +14,17 @@ def authenticate_identity_aws_def(aws_profile_name):
 
     # Authenticate Identity
     try:
-        session = boto3.session.Session(profile_name=aws_profile_name)
-
-        print('\n')
-        print(type(session))
-        print('\n')
+        session = boto3.session.Session(profile_name=aws_profile)
 
         # Record Authentication Success Event
-        message = 'AWS:  Authentication Success:  ' + aws_profile_name
+        message = '{"AWS" : {"Authentication" : {"Response" : "Success", "Profile" : "' + aws_profile + '"}}}'
         log.logger.info(message, exc_info=True)
 
         return session
     except ProfileNotFound as err:
         # Record Authentication Failure Event
-        message = 'AWS:  Authentication Failure:  ProfileNotFound:  ' + aws_profile_name + ':  '
-        log.logger.info('%s %s' % (message, err), exc_info=True)
+        message = '{"AWS" : {"Authentication" : {"Response" : "Failure", "Profile" : "' + aws_profile + '", "Error" : "ProfileNotFound", "Error Message" : "'
+        log.logger.info('%s %s %s' % (message, err, '"}}}'), exc_info=True)
 
         return None
     except Exception as err:

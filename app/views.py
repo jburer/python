@@ -26,9 +26,8 @@ from app.models import AuthenticatorStorage
 
 #from python_library.data.information.algorithm.random_number.pseudorandom_number import secure_pseudorandom_number
 #from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
-from python_library.identity_and_access.identity.authenticator.key import create_key
 from python_library.identity_and_access.identity.authenticator.key.key import Key
-from python_library.identity_and_access.identity import authenticate_identity
+from python_library.identity_and_access.identity.identity import Identity
 #from python_library.identity_and_access.identity.authenticator.key import key_storage
 #from python_library.identity_and_access.identity.authenticator.key import key_retrieval
 #from python_library.data.data_transformation.data_confidentiality.hash import derived_secure_hash
@@ -48,7 +47,7 @@ class HomeListView(ListView):
         return context
 
 def app(request, data):
-    my_profile_name='User2'
+    identity='User'
 
     myobject = []
     #myobject.append(derived_secure_hash.derived_secure_hash_def(data))
@@ -71,18 +70,17 @@ def app(request, data):
 
     #myobject.append(encryption.encryption_def(key, data))
 
-    my_key = create_key.create_key_def()
-    myobject.append(my_key)
-
      # Authenticate Identity
-    session = authenticate_identity.authenticate_identity_def('User3')
+    #session = authenticate_identity.authenticate_identity_def(identity)
+    session = Identity.authenticate_identity(identity)
 
-    # Connect to Service
-    #kms_client = session.client('kms')
+    # Create Client Connection to Service
+    if session is not None:
+        client = session.client('kms')
 
-    # Create Key
-    my_other_key = Key.create_key()
-    myobject.append(my_other_key)
+        # Create Key
+        my_key = Key.create_key(client, identity)
+        myobject.append(my_key)
 
     #my_authentication_code = authentication_code_generation.authentication_code_generation_def(data, my_key)
     #myobject.append(my_authentication_code)
