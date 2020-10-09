@@ -1,0 +1,10 @@
+{
+    "detail-type": [
+      "AuthenticateIdentity"
+    ],
+    "detail": {
+      "AuthenticationResponse": [
+        "Success"
+      ]
+    }
+  }

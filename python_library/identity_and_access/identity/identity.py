@@ -1,7 +1,7 @@
 """ Identity Module """
 
 from python_library.identity_and_access.identity import authenticate_identity_aws
-from python_library.product_service.operations.event.log import log
+from python_library.product_service.operations.log import log
 
 class Identity:
     """ Identity Class """

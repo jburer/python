@@ -2,7 +2,7 @@
 
 import base64
 from botocore.exceptions import ClientError
-from python_library.product_service.operations.event.log import log
+from python_library.product_service.operations.log import log
 
 def create_data_key(kms_client, aws_profile):
     """Generate a data key to use when encrypting and decrypting data

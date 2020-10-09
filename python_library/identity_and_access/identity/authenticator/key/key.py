@@ -2,7 +2,7 @@
 
 #from cryptography.fernet import Fernet
 from python_library.identity_and_access.identity.authenticator.key import create_key_asw
-from python_library.product_service.operations.event.log import log
+from python_library.product_service.operations.log import log
 
 class Key:
     """ Key Class """

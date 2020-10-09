@@ -28,6 +28,7 @@ from app.models import AuthenticatorStorage
 #from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
 from python_library.identity_and_access.identity.authenticator.key.key import Key
 from python_library.identity_and_access.identity.identity import Identity
+from python_library.product_service.operations.log.event.event import Event
 #from python_library.identity_and_access.identity.authenticator.key import key_storage
 #from python_library.identity_and_access.identity.authenticator.key import key_retrieval
 #from python_library.data.data_transformation.data_confidentiality.hash import derived_secure_hash

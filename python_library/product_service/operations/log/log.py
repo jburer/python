@@ -1,6 +1,6 @@
 import logging
 import json_log_formatter
-from python_library.product_service.operations.event.log import log_json
+from python_library.product_service.operations.log import log_json
 
 formatter = log_json.CustomizedJSONFormatter()
 
