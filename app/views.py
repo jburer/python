@@ -48,7 +48,7 @@ class HomeListView(ListView):
         return context
 
 def app(request, data):
-    identity='User'
+    identity = 'User3'
 
     myobject = []
     #myobject.append(derived_secure_hash.derived_secure_hash_def(data))

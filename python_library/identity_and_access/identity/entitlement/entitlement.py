@@ -1,17 +1,37 @@
+""" Entitlement Module """
+
+import boto3
+from python_library.product_service.operations.log import log
+
 class Entitlement:
-    name = "python"
+    """ Entitlement Class """
 
-    def change_name(self, new_name): # note that the first argument is self
-        self.name = new_name # access the class attribute with the self keyword
+    def __init__(self, permission, data_classification):
+        self.permission = permission
+        self.data_classification = data_classification
 
-    def entitlement_provisioning_def(self, entitlement, security_principal):
-        pass
+    @classmethod
+    def authorize_entitlement(cls, identity):
+        """ Authorize Entitlement Function """
 
-    def entitlement_deprovisioning_def(self, entitlement, security_principal):
-        pass
+        # Input Policy
 
-    def permission_def(self, permission):
-        pass
+        # Test Against Policy
 
-    def scope_def(self, scope):
-        pass
+        # Authenticate Identity
+        try:
+            session = authenticate_identity_aws.authenticate_identity_aws_def(identity)
+
+            if session is None:
+                # Record Authentication Failure Event
+                message = '{"App" : {"Authentication" : {"Response" : "Failure", "Profile" : "' + identity + '"}}}'
+            else:
+                # Record Authentication Success Event
+                message = '{"App" : {"Authentication" : {"Response" : "Success", "Profile" : "' + identity + '"}}}'
+            log.logger.info(message, exc_info=True)
+
+            return session
+        except Exception as err:
+            log.logger.debug(err, exc_info=True)
+            return None
+

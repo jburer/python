@@ -11,10 +11,10 @@ class Event:
         self.data_classification = data_classification
 
     @classmethod
-    def event_client(cls, identity):
+    def event_client(cls):
         """ Event Client Function """
 
-        session = boto3.session.Session(profile_name=identity)
+        session = boto3.session.Session(profile_name='User')
         if session is not None:
             return session.client('events')
 
