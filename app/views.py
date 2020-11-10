@@ -7,15 +7,17 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.views.generic import ListView
 
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
 import boto3
 import boto3.session
 
 from app.forms import LogMessageForm
 from app.models import LogMessage
+from app.serializers import LogMessageSerializer
 from app.forms import AuthenticatorGenerationForm
 from app.models import AuthenticatorStorage
-
-
 
 #from python_library.data.data_transformation.data_confidentiality.hash import hash_alt
 #from python_library.identity_and_access.identity.authenticator import authenticator_exchange
@@ -23,7 +25,6 @@ from app.models import AuthenticatorStorage
 #from python_library.identity_and_access.identity.authenticator.key.asymmetric_key import asymmetric_key_generation
 #from python_library.identity_and_access.identity.authenticator.password import password_generation
 #from python_library.data.information.algorithm.random_number import random_number
-
 #from python_library.data.information.algorithm.random_number.pseudorandom_number import secure_pseudorandom_number
 #from python_library.data.data_transformation.data_confidentiality.hash import secure_hash
 from python_library.identity_and_access.identity.authenticator.key.key import Key
@@ -119,6 +120,13 @@ def log_message(request):
             return redirect("home")
     else:
         return render(request, "app/log_message.html", {"form" : form})
+
+@api_view(['GET'])
+def log_message_collection(request):
+    if request.method == 'GET':
+        log_messages = LogMessage.objects.all()
+        serializer = LogMessageSerializer(log_messages, many=True)
+        return Response(serializer.data)
 
 def authenticator_generation(request):
     form = AuthenticatorGenerationForm(request.POST or None)

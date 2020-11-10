@@ -1,4 +1,5 @@
 from django.urls import path
+#from django.conf.urls import url
 from app import views
 from app.models import AuthenticatorStorage
 
@@ -14,5 +15,6 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("contact/", views.contact, name="contact"),
     path("log/", views.log_message, name="log"),
+    path("log_messages", views.log_message_collection),
     path("authenticator_generation/", views.authenticator_generation, name="authenticator_generation"),
 ]
