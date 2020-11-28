@@ -4,7 +4,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import rsa
 
-from python_library.product_service.operations.event.log import log
+from python_library.product_service.operations.log.event import event
 
 # Generate (Responder's) Public Key (just to test this locally)
 #peer_asymmetric_private_key = rsa.generate_private_key(

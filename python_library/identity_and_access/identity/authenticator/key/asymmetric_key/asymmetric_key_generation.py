@@ -7,7 +7,7 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives.asymmetric import padding
 #from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 
-from python_library.product_service.operations.event.log import log
+from python_library.product_service.operations.log.event import event
 
 # Generate (Responder's) Public Key (just to test this locally)
 #peer_asymmetric_private_key = rsa.generate_private_key(
@@ -42,6 +42,12 @@ def asymmetric_key_generation_def():
 
         # Generate a public key for use in the exchange.
         asymmetric_public_key = asymmetric_private_key.public_key()
+
+        # Serialize (and save) private key
+        with open("public.pem", "wb") as file:
+            file.write(asymmetric_public_key.public_bytes(
+                encoding=serialization.Encoding.PEM,
+                format=serialization.PublicFormat.SubjectPublicKeyInfo))
 
         #send public key
 
