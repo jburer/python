@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "/usr/local/bin/python3",
+		"python.pythonPath": "/usr/bin/python3",
 		"git.ignoreLimitWarning": true,
 		"python.linting.pylintArgs": [
 			"--init-hook",
