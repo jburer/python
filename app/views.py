@@ -40,6 +40,7 @@ from python_library.identity_and_access.identity.authenticator.key.private_key i
 from python_library.identity_and_access.identity.authenticator.key.public_key import public_key_generation_rsa
 #from python_library.identity_and_access.identity.authenticator.password import password_generation
 #from python_library.identity_and_access.identity.authenticator.authentication_code import authentication_code_generation
+from python_library.identity_and_access.identity.authenticator.authentication_code.asymmetric_authentication_code import asymmetric_authentication_code_creation_rsa
 #from python_library.identity_and_access.entitlement import assume_entitlement
 
 
@@ -91,11 +92,14 @@ def app(request, data):
     #myobject.append(authenticator_exchange.authenticator_exchange_def(data))
     #myobject.append(asymmetric_key_generation.asymmetric_key_generation_def())
     #myobject.append(private_key_generation_rsa.private_key_generation_rsa_def())
-    myobject.append(public_key_generation_rsa.public_key_generation_rsa_def())
+
+    rsa_public_key = public_key_generation_rsa.public_key_generation_rsa_def()
+    myobject.append(rsa_public_key)
     #myobject.append(password_generation.password_generation_def())
 
     #my_authentication_code = authentication_code_generation.authentication_code_generation_def(data, my_key)
     #myobject.append(my_authentication_code)
+    myobject.append(asymmetric_authentication_code_creation_rsa.asymmetric_authentication_code_creation_rsa_def(rsa_public_key))
 
     #my_retrieved_key = key_retrieval.key_retrieval_def('mysymmetrickey', my_profile_name)
     #myobject.append(my_retrieved_key)
