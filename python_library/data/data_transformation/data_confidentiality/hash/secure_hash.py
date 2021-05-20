@@ -1,7 +1,7 @@
 """ Secure Hash Module """
 
 import hashlib
-from python_library.product_service.operations.event.log import log
+from python_library.product_service.operations.log import log
 from python_library.data.data_transformation.type_conversion import byte_conversion
 
 

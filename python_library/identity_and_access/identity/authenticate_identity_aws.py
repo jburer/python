@@ -15,6 +15,11 @@ def authenticate_identity_aws_def(aws_profile):
     # Authenticate Identity
     try:
         session = boto3.session.Session(profile_name=aws_profile)
+
+        print('\n')
+        print(session)
+        print('\n')
+
         return session
     except ProfileNotFound as err:
         return 'Failure', err

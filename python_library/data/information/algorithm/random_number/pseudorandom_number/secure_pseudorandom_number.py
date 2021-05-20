@@ -1,7 +1,8 @@
 """ Secure Pseudorandom Number Module """
 
 import secrets
-from python_library.product_service.operations.event.log import log
+from python_library.product_service.operations.log import log
+
 
 def secure_pseudorandom_number_def(byte_size: int):
     """ Secure Pseudorandom Number Function """
