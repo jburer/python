@@ -32,5 +32,5 @@ smmap==3.0.4
 sqlparse==0.3.1
 stevedore==2.0.0
 toml==0.10.1
-urllib3==1.25.10
+urllib3==1.26.5
 wrapt==1.12.1
